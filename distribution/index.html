@@ -18,7 +18,7 @@
     <!-- Leaflet CSS-->
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="css/style.green.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
@@ -27,22 +27,25 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <body>
     <!-- navbar-->
     <header class="header">
       <nav class="navbar navbar-expand-lg py-lg-0">
-        <div class="container"><a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Multi.</a>
+        <div class="container">
+          <!--<a href="index.html" class="navbar-brand text-uppercase font-weight-bold">MTQ Zaid bin Tsabit</a>-->
+          <a href="index.html" class="navbar-brand"><img src="img/logo-color-min.png" width="90" height="50" class="d-inline-block align-top" alt=""></a>
           <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
           <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-              <li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Home </a>
+              <li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Beranda </a>
               </li>
-              <li class="nav-item"><a href="text.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Text page </a>
+              <li class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Akademik</a>
+                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0"><a href="#" class="dropdown-item small text-uppercase">Penerimaan Santri Baru</a><a href="#" class="dropdown-item small text-uppercase">Kurikulum</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 3</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 4</a></div>
               </li>
-              <li class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Dropdown</a>
-                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0"><a href="#" class="dropdown-item small text-uppercase">Dropdown item 1</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 2</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 3</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 4</a></div>
+              <li class="nav-item"><a href="text.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog </a>
               </li>
-              <li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contact </a>
+              <li class="nav-item"><a href="text.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Wakaf </a>
+              </li>
+              <li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Kontak </a>
               </li>
               <li class="nav-item mt-4 mt-lg-0">
                 <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-outline-primary nav-btn btn-sm"> <i class="fas fa-sign-out-alt mr-2"></i>Login </button>
@@ -79,13 +82,16 @@
         </div>
       </div>
     </div>
-    <section style="background: url(img/jumbotron1.jpg)" class="py-5 bg-cover bg-center">
+    
+    <section style="background: url(img/slider1.png)" class="py-5 bg-cover bg-center">
       <div class="hero-overlay"></div>
       <div class="container py-5 text-white text-center">
-        <h1 class="text-shadow hero-heading">This is Multi</h1>
-        <p class="text-shadow lead my-4">Bootstrap Multipurpose Template by <a href="#" class="text-white">Bootstrapious.com</a></p><a href="#" class="btn btn-outline-light btn-sm">Learn More</a>
+        <h1 class="text-shadow hero-heading">MTQ Zaid bin Tsabit</h1>
+        <p class="text-shadow lead">Markaz Tahfidz Al Qur'an Zaid bin Tsabit Radhiallahu’anhu</p>
+        <p class="text-shadow lead">Jalan Teratai Gg. 7 Barat No. 42 Klego, Pekalongan, Jawa Tengah, 51124</p>
       </div>
     </section>
+    
     <section class="py-5">
       <div class="container py-5">
         <h2 class="mb-4">PROFIL YAYASAN</h2>
