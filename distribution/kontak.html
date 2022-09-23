@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Multi - Multipurpose Bootstrap theme by Bootstrapious.com</title>
+    <title>MTQ Zaid bin Tsabit Radhiallahu’anhu</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -18,7 +18,7 @@
     <!-- Leaflet CSS-->
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="css/style.green.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
@@ -31,18 +31,33 @@
     <!-- navbar-->
     <header class="header">
       <nav class="navbar navbar-expand-lg py-lg-0">
-        <div class="container"><a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Multi.</a>
+        <div class="container">
+          <!--<a href="index.html" class="navbar-brand text-uppercase font-weight-bold">MTQ Zaid bin Tsabit</a>-->
+          <a href="index.html" class="navbar-brand"><img src="img/logo-color-min.png" width="90" height="50" class="d-inline-block align-top" alt=""></a>
           <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
           <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-              <li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Home </a>
+              <li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Beranda </a>
               </li>
-              <li class="nav-item"><a href="text.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Text page </a>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Akademik</a>
+                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
+                  <a href="#" class="dropdown-item small text-uppercase">Kurikulum</a>
+                  <a href="#" class="dropdown-item small text-uppercase">Pengajar & Staff</a>
+                  <a href="#" class="dropdown-item small text-uppercase">Penerimaan Santri Baru</a>
+                </div>
               </li>
-              <li class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Dropdown</a>
-                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0"><a href="#" class="dropdown-item small text-uppercase">Dropdown item 1</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 2</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 3</a><a href="#" class="dropdown-item small text-uppercase">Dropdown item 4</a></div>
+              <li class="nav-item"><a href="#" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog </a>
               </li>
-              <li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Contact </a>
+              <li class="nav-item dropdown">
+                <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Wakaf</a>
+                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
+                  <a href="laman.html" class="dropdown-item small text-uppercase">Wakaf Pembangunan Gedung Baru</a>
+                  <a href="laman.html" class="dropdown-item small text-uppercase">Wakaf Operasional Pondok</a>
+                </div>
+              </li>
+              </li>
+              <li class="nav-item"><a href="kontak.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Kontak </a>
               </li>
               <li class="nav-item mt-4 mt-lg-0">
                 <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-outline-primary nav-btn btn-sm"> <i class="fas fa-sign-out-alt mr-2"></i>Login </button>
@@ -56,7 +71,7 @@
       <div role="document" class="modal-dialog modal-sm">
         <div class="modal-content rounded-0">
           <div class="modal-header">
-            <h5 id="loginModalLabel" class="text-uppercase modal-title m-0">Customers login</h5>
+            <h5 id="loginModalLabel" class="text-uppercase modal-title m-0">Login Form</h5>
             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true" class="small text-muted">&times;</span></button>
           </div>
           <div class="modal-body">
@@ -73,12 +88,13 @@
             </form>
             <div class="text-center">   
               <p class="text-muted small">Not registered yet?</p>
-              <p class="small text-muted"> <a href="#" class="font-weight-bold">Register now!</a> It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
+              <p class="small text-muted"> <a href="#" class="font-weight-bold">Register now!</a> It is easy and done in 1 minute!</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <section class="py-5 bg-cover bg-gray">
       <div class="container py-5">
         <div aria-label="breadcrumb" class="nav">
@@ -87,7 +103,7 @@
             <li aria-current="page" class="breadcrumb-item active">Contact</li>
           </ol>
         </div>
-        <h1 class="lined">Contact</h1>
+        <h1 class="lined">Kontak</h1>
         <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
       </div>
     </section>
@@ -120,6 +136,7 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-7 ml-auto">
             <div class="col-lg-12 col-md-6 mb-4">
               <div class="icon mb-4"><i class="pe-7s-pen"></i></div>
@@ -157,28 +174,30 @@
         </div>
       </div>
     </section>
-    <div id="map"></div>
+    
+    <!-- <div id="map"></div> -->
+    <section>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0530461570493!2d109.67907461537501!3d-6.884249495025413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7025e0c989faf3%3A0x2d05a18258b40e70!2sMarkaz%20Tahfidz%20Qur&#39;an%20Zaid%20Bin%20Tsabit!5e0!3m2!1sid!2sid!4v1663898320327!5m2!1sid!2sid" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
     <footer style="background: #eee;" class="pt-5">
       <div class="container py-5">
         <div class="row">
           <div class="col-lg-8 col-md-6 mb-4">
-            <h5 class="lined lined-dark mb-3">About Multi</h5>
-            <p class="text-muted text-small">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus magna. Cras in mi at felis aliquet congue. Vivamus magna. Cras in mi at felis aliquet congue.</p>
-            <p class="text-muted text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.</p>
+            <h5 class="lined lined-dark mb-3">Visi & Misi</h5>
+            <p class="text-muted text-small"><strong>Visi :</strong> Sebagai lembaga pendidikan Islam yang memiliki keunggulan dalam program tahfidz Al Qur’an dan program Bahasa Arab.</p>
+            <p class="text-muted text-small"><strong>Misi :</strong> Menyelenggarakan pendidikan dibidang Al Qur’an dan mencetak guru-guru Al Qur’an serta mengembangkan proses pembelajaran dengan metode dan sarana modern.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <h5 class="lined lined-dark mb-3">Our offices</h5>
-            <h6>London</h6>
-            <p class="text-muted mb-0 text-small">Donec eleifend</p>
-            <p class="text-muted mb-0 text-small">libero at sagittis</p>
-            <p class="text-muted mb-4 text-small">mollis + 44 2556 789 8799 </p>
-            <h6>Paris</h6>
-            <p class="text-muted mb-0 text-small">Donec eleifend</p>
-            <p class="text-muted mb-0 text-small">libero at sagittis</p>
-            <p class="text-muted mb-0 text-small">mollis + 44 2556 789 8799 </p>
+            <h5 class="lined lined-dark mb-3">Kantor</h5>
+            <h6>Pekalongan - Jawa Tengah</h6>
+            <p class="text-muted mb-0 text-small">Jl. Teratai Gg. 7 Barat No. 42 Klego</p>
+            <p class="text-muted mb-0 text-small">Kec. Pekalongan Timur, 51124 </p>
+            <p class="text-muted mb-4 text-small">zaidbintsabitpekalongan@gmail.com </p>
+            
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <h5 class="lined lined-dark mb-3">Popular Categories</h5>
+            <h5 class="lined lined-dark mb-3">Kategori Poluler</h5>
             <ul class="list-unstyled">
               <li><a href="#" class="footer-link text-small">Graphic design</a></li>
               <li><a href="#" class="footer-link text-small">Web design</a></li>
@@ -187,17 +206,22 @@
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <h5 class="lined lined-dark mb-3">Let's be friends</h5>
+            <h5 class="lined lined-dark mb-3">Media Sosial</h5>
             <ul class="list-inline">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fas fa-envelope"></i></a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-6">
-            <h5 class="lined lined-dark mb-3">News and Updates</h5>
-            <p class="text-muted mb-4 text-small">Sign up to get weekly portion of fresh jobs and news from us.
+            <h5 class="lined lined-dark mb-3">Tautan</h5>
+
+            <p class="text-muted mb-0 text-small"><a href="#" class="footer-link">Zaid Store</a></p>
+            <p class="text-muted mb-0 text-small"><a href="#" class="footer-link">Donasi Operasional Pondok</a></p>
+            <p class="text-muted mb-0 text-small"><a href="#" class="footer-link">Donasi Pembangunan Pondok</a></p>
+
+            <!-- <p class="text-muted mb-4 text-small">Sign up to get weekly portion of fresh jobs and news from us.
               <form action="#">
                 <div class="input-group mb-3">
                   <input type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" class="form-control">
@@ -206,7 +230,7 @@
                   </div>
                 </div>
               </form>
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
@@ -214,7 +238,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
-              <p class="small text-gray mb-0">©2019 Best company</p>
+              <p class="small text-gray mb-0">©2022 Markaz Zaid bin Tsabit Radhiallahu’anhu</p>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
               <p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
