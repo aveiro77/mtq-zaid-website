@@ -13,9 +13,15 @@
             My Posts
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
+            <span data-feather="grid"></span>
+            Post Categories  
+          </a>
+        </li>
       </ul>
 
-      @can('admin')
+      {{-- @can('admin')
         <h6 class="sidebar-heading d-flex justify-content-between align-item-center px-3 mt-4 mb-1 text-muted">
           <span>Administrator</span>
         </h6>
@@ -28,7 +34,11 @@
             </a>
           </li>
         </ul>
-      @endcan
+      @endcan --}}
 
+
+      <div class="d-grid gap-2 p-3 mb-auto">
+        <a href="/" target="blank" class="btn btn-primary btn-sm rounded-0" type="button">View your site</a>
+      </div>
     </div>
   </nav>

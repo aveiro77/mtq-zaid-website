@@ -30,7 +30,7 @@
             </li>
 
             @auth
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Welcome back, {{ auth()->user()->name }}
                   </a>
@@ -43,13 +43,18 @@
                       </form>
                     </li>
                   </ul>
-                </li>
+                </li> --}}
 
                 <li class="nav-item dropdown">
-                  <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle {{ Request::is('wakaf') ? 'active' : '' }}">Wakaf</a>
+                  <a id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Welcome, {{ auth()->user()->name }}
+                  </a>
                   <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
                     <a href="/dashboard" class="dropdown-item small text-uppercase">My Dashboard</a>
-                    <a href="/wakaf-operasional" class="dropdown-item small text-uppercase">Wakaf Operasional Pondok</a>
+                    <form action="/logout" method="post">
+                      @csrf
+                      <button type="submit" href="#" class="dropdown-item small text-uppercase">Logout</button>
+                    </form>
                   </div>
                 </li>
 
