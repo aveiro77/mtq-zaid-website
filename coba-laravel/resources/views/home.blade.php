@@ -18,24 +18,36 @@
         <a href="laman.html" class="btn btn-outline-primary btn-sm">Baca selengkapnya</a>
       </div>
     </section>
+    
     <section class="bg-gray py-5">
       <div class="container py-5">
         <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0"><a href="#" class="d-block"><img src="img/posts/blog1.jpg" alt="" class="img-fluid mb-4"></a>
-            <h3 class="h5 mb-4"><a href="#" class="text-dark">Rit eget tincidunt condimentum</a></h3>
-            <p class="text-small">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p><a href="post.html" class="btn btn-outline-primary btn-sm">Lanjut membaca</a>
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0"><a href="#" class="d-block"><img src="img/posts/blog2.jpg" alt="" class="img-fluid mb-4"></a>
-            <h3 class="h5 mb-4"><a href="#" class="text-dark">Tempor sit amet</a></h3>
-            <p class="text-small">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p><a href="post.html" class="btn btn-outline-primary btn-sm">Lanjut membaca</a>
-          </div>
-          <div class="col-lg-4"><a href="#" class="d-block"><img src="img/posts/blog3.jpg" alt="" class="img-fluid mb-4"></a>
-            <h3 class="h5 mb-4"><a href="#" class="text-dark">Vestibulum erat wisi</a></h3>
-            <p class="text-small">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p><a href="post.html" class="btn btn-outline-primary btn-sm">Lanjut membaca</a>
-          </div>
+          <?php $count = 1 ?>
+          @foreach($posts as $post)
+            @if($count<=3)
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                @if($post->image)
+                  <a href="/posts/{{ $post->slug }}" class="d-block">
+                    <img src="{{ asset('storage/'.$post->image) }}" alt="{{  $post->category->name }}" class="img-fluid mb-4">
+                  </a>
+                  @else
+                  <a href="/posts/{{ $post->slug }}" class="d-block">
+                    <img src="https://picsum.photos/1200/700?random=2" alt="{{  $post->category->name }}" class="img-fluid mb-4">
+                  </a>
+                @endif
+                <h3 class="h5 mb-1"><a href="/posts/{{ $post->slug }}" class="text-dark">{{ $post->title }}</a></h3>
+                <small class="text-muted">
+                  <p>by. <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> in <a href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{ $posts[0]->category->name }}</a> {{ $post->created_at->diffForHumans() }}</p>
+                </small>
+                <p class="text-small">{{ $post->excerpt }}</a>
+              </div>
+            @endif
+          <?php $count++ ?>
+          @endforeach
         </div>
       </div>
     </section>
+
     <section class="py-5">
       <div class="container py-5">
         <h2 class="mb-5">Program Pendidikan</h2>
@@ -65,7 +77,7 @@
             <!--<div class="icon mb-4"><i class="pe-7s-monitor"></i></div>-->
             <div class="mb-4"><img src="img/home/105x105/p4-min-105x105.png" alt="" class="img-fluid"></div>
             <h5 class="lined mb-4">Pembelajaran Qiraat</h5>
-            <p class="text-muted text-small">Qiraat Asyrah ( Hafs, Syu’bah, Warsy, Qalun, dsb).</p>
+            <p class="text-muted text-small">Qiraat Asyrah (Hafs, Syu’bah, Warsy, Qalun, dsb).</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
             <!--<div class="icon mb-4"><i class="pe-7s-signal"></i></div>-->

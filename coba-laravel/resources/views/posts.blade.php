@@ -55,7 +55,7 @@
                             @if($post->image)
                                 <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid" alt="{{  $posts[0]->category->name }}">
                             @else
-                                <img src="https://picsum.photos/1200/400?random=2" class="card-img-top" alt="{{  $posts[0]->category->name }}">
+                                <img src="https://picsum.photos/1200/700?random=2" class="card-img-top" alt="{{  $posts[0]->category->name }}">
                             @endif
                             
                                 <div class="card-body">

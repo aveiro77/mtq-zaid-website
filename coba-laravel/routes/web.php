@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminCategoryController;
 use App\Models\Category;
+use App\Models\Post;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -22,19 +23,20 @@ use App\Http\Controllers\DashboardPostController;
 Route::get('/ ', function () {
     return view('home', [
         'title' => 'Home',
-        'active' => 'Home'
+        'active' => 'Home',
+        'posts' => Post::all()
     ]);
 });
 
-Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About',
-        'nama' => 'Jumhan',
-        'email' => 'jumhan.ict@web.id',
-        'gambar' => 'img/jasa.jpg',
-        'active' => 'about'
-    ]);
-});
+// Route::get('/about', function () {
+//     return view('about', [
+//         'title' => 'About',
+//         'nama' => 'Jumhan',
+//         'email' => 'jumhan.ict@web.id',
+//         'gambar' => 'img/jasa.jpg',
+//         'active' => 'about'
+//     ]);
+// });
 
 //Route::get('/blog', [PostController::class, 'index']);
 Route::get('/posts', [PostController::class, 'index']);
@@ -48,6 +50,13 @@ Route::get('/categories', function () {
         'title' => 'Post categories',
         'active' => 'categories',
         'categories' => Category::all(),
+    ]);
+});
+
+Route::get('/kontak', function () {
+    return view('contact', [
+        'title' => 'Kontak',
+        'active' => 'kontak'
     ]);
 });
 

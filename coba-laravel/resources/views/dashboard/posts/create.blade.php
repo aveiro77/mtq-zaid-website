@@ -42,7 +42,10 @@
         </div>
 
         <div class="mb-3">
-          <label for="image" class="form-label">Post Image</label>
+          <label for="image" class="form-label">
+            Post Image <br>
+            <small class="text-muted">Recommended dimension is 1200x700 pixel</small>
+          </label>
           <img class="img-preview img-fluid mb-3 col-sm-5">
           <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
           @error('image')

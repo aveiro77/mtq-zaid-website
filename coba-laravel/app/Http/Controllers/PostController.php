@@ -42,7 +42,8 @@ class PostController extends Controller
             'title' => 'Single Post',
             //'post' => Post::find($post)
             'post' => $post,
-            'active' => 'posts'
+            'active' => 'posts',
+            'categories' => Category::all()
         ]);
     }
 }

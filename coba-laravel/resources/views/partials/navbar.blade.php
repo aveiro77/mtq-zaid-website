@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg py-lg-0">
       <div class="container">
         <!--<a href="index.html" class="navbar-brand text-uppercase font-weight-bold">MTQ Zaid bin Tsabit</a>-->
-        <a href="/" class="navbar-brand"><img src="img/logo-color-min.png" width="90" height="50" class="d-inline-block align-top" alt=""></a>
+        <a href="/" class="navbar-brand"><img src="/img/logo-color-min.png" width="90" height="50" class="d-inline-block align-top" alt=""></a>
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
@@ -16,7 +16,7 @@
                 <a href="/psb" class="dropdown-item small text-uppercase">Penerimaan Santri Baru</a>
               </div>
             </li>
-            <li class="nav-item"><a href="/posts" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog </a>
+            <li class="nav-item"><a href="/posts" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 {{ Request::is('posts') ? 'active' : '' }}">Blog </a>
             </li>
             <li class="nav-item dropdown">
               <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle {{ Request::is('wakaf') ? 'active' : '' }}">Wakaf</a>

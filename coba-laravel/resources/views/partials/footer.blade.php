@@ -7,10 +7,10 @@
           <p class="text-muted text-small"><strong>Misi :</strong> Menyelenggarakan pendidikan dibidang Al Qur’an dan mencetak guru-guru Al Qur’an serta mengembangkan proses pembelajaran dengan metode dan sarana modern.</p>
         </div>
         <div class="col-lg-4 col-md-6 mb-4">
-          <h5 class="lined lined-dark mb-3">Kantor</h5>
-          <h6>Pekalongan - Jawa Tengah</h6>
-          <p class="text-muted mb-0 text-small">Jl. Teratai Gg. 7 Barat No. 42 Klego</p>
-          <p class="text-muted mb-0 text-small">Kec. Pekalongan Timur, 51124 </p>
+          <h5 class="lined lined-dark mb-3">Alamat</h5>
+          <h6>Jl. Teratai Gg. 7 Barat No. 42 Klego</h6>
+          <p class="text-muted mb-0 text-small">Kec. Pekalongan Timur, 51124</p>
+          <p class="text-muted mb-0 text-small">Pekalongan - Jawa Tengah</p>
           <p class="text-muted mb-4 text-small">zaidbintsabitpekalongan@gmail.com </p>
           
         </div>
