@@ -19,7 +19,7 @@
             <li class="nav-item"><a href="/posts" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 {{ Request::is('posts') ? 'active' : '' }}">Blog </a>
             </li>
             <li class="nav-item dropdown">
-              <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle {{ Request::is('wakaf') ? 'active' : '' }}">Wakaf</a>
+              <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle  {{ Request::is('wakaf') ? 'active' : '' }}">Wakaf</a>
               <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
                 <a href="/wakaf-pembangunan" class="dropdown-item small text-uppercase">Wakaf Pembangunan Gedung Baru</a>
                 <a href="/wakaf-operasional" class="dropdown-item small text-uppercase">Wakaf Operasional Pondok</a>
@@ -30,20 +30,6 @@
             </li>
 
             @auth
-                {{-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Welcome back, {{ auth()->user()->name }}
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="/dashboard">My Dashboard</a></li>
-                    <li>
-                      <form action="/logout" method="post">
-                        @csrf
-                        <button type="submit" class="dropdown-item" href="#">Logout</button>
-                      </form>
-                    </li>
-                  </ul>
-                </li> --}}
 
                 <li class="nav-item dropdown">
                   <a id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,7 +43,6 @@
                     </form>
                   </div>
                 </li>
-
 
             @else
                 <li class="nav-item">

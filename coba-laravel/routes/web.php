@@ -53,6 +53,13 @@ Route::get('/categories', function () {
     ]);
 });
 
+Route::get('/wakaf-pembangunan', function () {
+    return view('wakaf-pembangunan', [
+        'title' => 'Wakaf Pembangunan',
+        'active' => 'wakaf'
+    ]);
+});
+
 Route::get('/kontak', function () {
     return view('contact', [
         'title' => 'Kontak',
