@@ -60,6 +60,13 @@ Route::get('/wakaf-pembangunan', function () {
     ]);
 });
 
+Route::get('/panduan-wakaf-pembangunan', function () {
+    return view('panduan-wakaf-pembangunan', [
+        'title' => 'Panduan Wakaf Pembangunan',
+        'active' => 'wakaf'
+    ]);
+});
+
 Route::get('/kontak', function () {
     return view('contact', [
         'title' => 'Kontak',

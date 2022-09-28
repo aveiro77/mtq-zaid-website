@@ -29,7 +29,7 @@
               <li aria-current="page" class="breadcrumb-item active">Kekurangan</li>
             </ol>
           </div>
-          <h2 class="lined text-danger">Rp. 4.890.500.000</h2>
+          <h2 class="lined text-danger">Rp. 4.000.000.000</h2>
           <!-- <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p> -->
         </div>
       </div>
@@ -62,7 +62,7 @@
           <p class="mb-4">Untuk menyalurkan donasi Anda mohon untuk <strong>meluangkan waktu</strong> sejenak untuk membaca <strong>Petunjuk dan Rincian Anggaran </strong>dengan cara klik tombol "Panduan Wakaf" dibawah ini;</p>
           
           <div class="text-center">
-            <button type="button" class="btn btn-lg btn-info mb-4 justify-content-center">Panduan Wakaf</button>
+            <a href="/panduan-wakaf-pembangunan" type="button" class="btn btn-lg btn-info mb-4 justify-content-center">Panduan Wakaf</a>
           </div>
 
           <p class="mb-4">Jika Anda ada pertanyaan terkait proyek pembangunan gedung pondok pesantren Markaz Tahfid Al Qur’an Zaid Bin Tsabit silakan hubungi kontak berikut :</p>

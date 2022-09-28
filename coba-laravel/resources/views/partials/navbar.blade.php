@@ -19,7 +19,7 @@
             <li class="nav-item"><a href="/posts" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 {{ Request::is('posts') ? 'active' : '' }}">Blog </a>
             </li>
             <li class="nav-item dropdown">
-              <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle  {{ Request::is('wakaf') ? 'active' : '' }}">Wakaf</a>
+              <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle @if(Request::is('wakaf') or Request::is('wakaf-pembangunan') or Request::is('panduan-wakaf-pembangunan')) active @endif ">Wakaf</a>
               <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
                 <a href="/wakaf-pembangunan" class="dropdown-item small text-uppercase">Wakaf Pembangunan Gedung Baru</a>
                 <a href="/wakaf-operasional" class="dropdown-item small text-uppercase">Wakaf Operasional Pondok</a>
