@@ -14,42 +14,21 @@
     
         <div class="row py-4">
             <div class="col-lg-8 mx-auto">
-                <div class="card shadow mb-4">
-                    <div class="card-body p-3">
-                      <h4>Pekerjaan Persiapan/ Umum</h4>
-                      <p>Kode unik : 001</p>
-                        <!-- Animated progress bars-->
-                        <div style="height: 8px" class="progress rounded-pill">
-                            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%" class="progress-bar progress-bar-striped progress-bar-animated rounded-pill"></div>
-                        </div>
-                        <a href="http://wa.me/6281228899970" target="blank" type="button" class="btn btn-sm btn-primary mt-4">Konfirmasi</a>
-                    </div>
-                </div>
-                <div class="card shadow mb-4">
-                    <div class="card-body p-3">
-                      <h4>Pekerjaan Tanah</h4>
-                      <p>Kode unik : 002</p>
-                        <!-- Animated progress bars-->
-                        <div style="height: 8px" class="progress rounded-pill">
-                            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%" class="progress-bar progress-bar-striped progress-bar-animated rounded-pill"></div>
-                        </div>
 
-                        <button type="button" class="btn btn-sm btn-primary mt-4">Konfirmasi</button>
-                    </div>
-                </div>
-                <div class="card shadow mb-4">
+                @foreach ($budgetings as $rab)
+                  <div class="card shadow mb-4">
                     <div class="card-body p-3">
-                      <h4>Pekerjaan Struktur Lantai 1</h4>
-                      <p>Kode unik : 003</p>
+                      <h4>{{ $rab->description }}</h4>
+                      <p>Anggaran  : Rp. {{ number_format($rab->budget,2,",",".") }} <br> Kode Unik : <strong> {{ $rab->unicode }} </strong></p>
                         <!-- Animated progress bars-->
                         <div style="height: 8px" class="progress rounded-pill">
                             <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%" class="progress-bar progress-bar-striped progress-bar-animated rounded-pill"></div>
                         </div>
-
-                        <button type="button" class="btn btn-sm btn-primary mt-4">Konfirmasi</button>
+                        <a href="http://wa.me/62{{ $rab->cp_hp }}" target="blank" type="button" class="btn btn-sm btn-primary mt-4">Konfirmasi</a>
                     </div>
-                </div>
-                
+                  </div>
+                @endforeach
+
             </div>
         </div>
       </div>

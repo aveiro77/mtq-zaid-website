@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Budgeting;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,17 +23,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Jumhan Prayitno',
             'username' => 'jumhan',
             'email' => 'jumhan@gmail.com',
-            'password' => bcrypt('jumhan')
+            'password' => bcrypt('jumhan'),
+            'is_admin' => '1'
         ]);
 
-        /*
-        User::create([
-            'name' => 'aldo',
-            'email' => 'aldo@gmail.com',
-            'password' => bcrypt('aldo')
-        ]);
-        */
-
+        // this one put from the factory
         User::factory(3)->create();
 
         Category::create([
@@ -52,39 +47,157 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(20)->create();
 
-        /* ganti ke factory
-        Post::create([
-            'title' => 'Judul pertama',
-            'slug' => 'judul-pertama',
-            'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illu',
-            'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illum,</p><p> voluptatum voluptate ea accusantium perspiciatis, explicabo rem eius tenetur necessitatibus et praesentium dignissimos magni? Nulla dolor minima distinctio quisquam temporibus voluptatibus quibusdam unde deleniti dolorem repudiandae porro quas hic delectus, saepe officia odio corporis maiores magnam nobis assumenda perferendis! Itaque, dolorem non quidem quam voluptatem at consequatur enim sit molestias consequuntur sint deserunt facere doloribus omnis? Dolore magnam vero tenetur veritatis, doloribus similique error corrupti ex dolor id assumenda, nobis repudiandae ullam laboriosam iure consectetur et quod incidunt cum. Autem earum, repudiandae esse maiores accusamus architecto nulla aliquam blanditiis eos praesentium, vero sint quis et, incidunt provident? Accusamus repudiandae nemo minima delectus earum doloribus, necessitatibus minus voluptatum nostrum. Dolores dignissimos vitae nulla, atque esse architecto, labore consequuntur quo libero sed accusantium deleniti molestias illo odit voluptates ullam. Officia, dolore fugiat.</p>',
-            'category_id' => 1,
-            'user_id' => 1,
+        Budgeting::create([
+            'description' => 'Pekerjaan Persiapan/ Umum',
+            'slug' => 'pekerjaan-persiapan-umum',
+            'budget' => 44469600,
+            'unicode' => '001',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
         ]);
-        Post::create([
-            'title' => 'Judul kedua',
-            'slug' => 'judul-kedua',
-            'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illu',
-            'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illum,</p><p> voluptatum voluptate ea accusantium perspiciatis, explicabo rem eius tenetur necessitatibus et praesentium dignissimos magni? Nulla dolor minima distinctio quisquam temporibus voluptatibus quibusdam unde deleniti dolorem repudiandae porro quas hic delectus, saepe officia odio corporis maiores magnam nobis assumenda perferendis! Itaque, dolorem non quidem quam voluptatem at consequatur enim sit molestias consequuntur sint deserunt facere doloribus omnis? Dolore magnam vero tenetur veritatis, doloribus similique error corrupti ex dolor id assumenda, nobis repudiandae ullam laboriosam iure consectetur et quod incidunt cum. Autem earum, repudiandae esse maiores accusamus architecto nulla aliquam blanditiis eos praesentium, vero sint quis et, incidunt provident? Accusamus repudiandae nemo minima delectus earum doloribus, necessitatibus minus voluptatum nostrum. Dolores dignissimos vitae nulla, atque esse architecto, labore consequuntur quo libero sed accusantium deleniti molestias illo odit voluptates ullam. Officia, dolore fugiat.</p>',
-            'category_id' => 1,
-            'user_id' => 1,
+        Budgeting::create([
+            'description' => 'Pekerjaan Tanah',
+            'slug' => 'pekerjaan-tanah',
+            'budget' => 147182183,
+            'unicode' => '002',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
         ]);
-        Post::create([
-            'title' => 'Judul ketiga',
-            'slug' => 'judul-ketiga',
-            'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illu',
-            'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illum,</p><p> voluptatum voluptate ea accusantium perspiciatis, explicabo rem eius tenetur necessitatibus et praesentium dignissimos magni? Nulla dolor minima distinctio quisquam temporibus voluptatibus quibusdam unde deleniti dolorem repudiandae porro quas hic delectus, saepe officia odio corporis maiores magnam nobis assumenda perferendis! Itaque, dolorem non quidem quam voluptatem at consequatur enim sit molestias consequuntur sint deserunt facere doloribus omnis? Dolore magnam vero tenetur veritatis, doloribus similique error corrupti ex dolor id assumenda, nobis repudiandae ullam laboriosam iure consectetur et quod incidunt cum. Autem earum, repudiandae esse maiores accusamus architecto nulla aliquam blanditiis eos praesentium, vero sint quis et, incidunt provident? Accusamus repudiandae nemo minima delectus earum doloribus, necessitatibus minus voluptatum nostrum. Dolores dignissimos vitae nulla, atque esse architecto, labore consequuntur quo libero sed accusantium deleniti molestias illo odit voluptates ullam. Officia, dolore fugiat.</p>',
-            'category_id' => 2,
-            'user_id' => 2,
+        Budgeting::create([
+            'description' => 'Pekerjaan Struktur Lantai 1',
+            'slug' => 'pekerjaan-struktur-lantai1',
+            'budget' => 1555066206,
+            'unicode' => '003',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
         ]);
-        Post::create([
-            'title' => 'Judul keempat',
-            'slug' => 'judul-keempat',
-            'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illu',
-            'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore odit hic veniam recusandae ex quam fuga ipsa laboriosam voluptates illum,</p><p> voluptatum voluptate ea accusantium perspiciatis, explicabo rem eius tenetur necessitatibus et praesentium dignissimos magni? Nulla dolor minima distinctio quisquam temporibus voluptatibus quibusdam unde deleniti dolorem repudiandae porro quas hic delectus, saepe officia odio corporis maiores magnam nobis assumenda perferendis! Itaque, dolorem non quidem quam voluptatem at consequatur enim sit molestias consequuntur sint deserunt facere doloribus omnis? Dolore magnam vero tenetur veritatis, doloribus similique error corrupti ex dolor id assumenda, nobis repudiandae ullam laboriosam iure consectetur et quod incidunt cum. Autem earum, repudiandae esse maiores accusamus architecto nulla aliquam blanditiis eos praesentium, vero sint quis et, incidunt provident? Accusamus repudiandae nemo minima delectus earum doloribus, necessitatibus minus voluptatum nostrum. Dolores dignissimos vitae nulla, atque esse architecto, labore consequuntur quo libero sed accusantium deleniti molestias illo odit voluptates ullam. Officia, dolore fugiat.</p>',
-            'category_id' => 2,
-            'user_id' => 2,
+        Budgeting::create([
+            'description' => 'Pekerjaan Arsitektur Lantai 1',
+            'slug' => 'pekerjaan-arsitektur-lantai1',
+            'budget' => 485719171,
+            'unicode' => '004',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
         ]);
-        */
+        Budgeting::create([
+            'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 1',
+            'slug' => 'pekerjaan-mekanikal-elektikal-lantai1',
+            'budget' => 62997860,
+            'unicode' => '005',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Struktur Lantai 2',
+            'slug' => 'pekerjaan-struktur-lantai2',
+            'budget' => 671046165,
+            'unicode' => '006',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Arsitektur Lantai 2',
+            'slug' => 'pekerjaan-arsitektur-lantai2',
+            'budget' => 431774974,
+            'unicode' => '007',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 2',
+            'slug' => 'pekerjaan-mekanikal-elektikal-lantai2',
+            'budget' => 69796870,
+            'unicode' => '008',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Struktur Lantai 3',
+            'slug' => 'pekerjaan-struktur-lantai3',
+            'budget' => 671640160,
+            'unicode' => '009',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Arsitektur Lantai 3',
+            'slug' => 'pekerjaan-arsitektur-lantai3',
+            'budget' => 458468141,
+            'unicode' => '010',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 3',
+            'slug' => 'pekerjaan-mekanikal-elektikal-lantai3',
+            'budget' => 71657610,
+            'unicode' => '011',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Struktur Lantai 4',
+            'slug' => 'pekerjaan-struktur-lantai4',
+            'budget' => 168593066,
+            'unicode' => '012',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Arsitektur Lantai 4',
+            'slug' => 'pekerjaan-arsitektur-lantai4',
+            'budget' => 647962309,
+            'unicode' => '013',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 4',
+            'slug' => 'pekerjaan-mekanikal-elektikal-lantai4',
+            'budget' => 100548150,
+            'unicode' => '014',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Paving Block',
+            'slug' => 'pekerjaan-paving-block',
+            'budget' => 27238000,
+            'unicode' => '015',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Pagar',
+            'slug' => 'pekerjaan-pagar',
+            'budget' => 103979559,
+            'unicode' => '016',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pengadaan AC',
+            'slug' => 'pengadaan-ac',
+            'budget' => 167370000,
+            'unicode' => '017',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Hydran',
+            'slug' => 'pekerjaan-hydran',
+            'budget' => 750000000,
+            'unicode' => '018',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
+        Budgeting::create([
+            'description' => 'Pekerjaan Mebelair',
+            'slug' => 'pekerjaan-mebelair',
+            'budget' => 101900000,
+            'unicode' => '019',
+            'cp_hp' => '85740074567',
+            'cp_name' => 'Fulan',
+        ]);
     }
 }

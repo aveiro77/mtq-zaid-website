@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminCategoryController;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Budgeting;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -63,7 +64,8 @@ Route::get('/wakaf-pembangunan', function () {
 Route::get('/panduan-wakaf-pembangunan', function () {
     return view('panduan-wakaf-pembangunan', [
         'title' => 'Panduan Wakaf Pembangunan',
-        'active' => 'wakaf'
+        'active' => 'wakaf',
+        'budgetings' => Budgeting::all(),
     ]);
 });
 
