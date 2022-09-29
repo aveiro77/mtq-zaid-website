@@ -1,7 +1,7 @@
 @extends('layouts/main')
 @section('container')  
 
-<section class="py-5 bg-cover bg-gray">
+  <section class="py-5 bg-cover bg-gray">
     <div class="container py-5">
       <h1 class="lead"><strong>Laporan Keuangan</strong></h1>
       <div class="row">
@@ -34,6 +34,13 @@
         </div>
       </div>
       <!-- <p class="lead my-4">Silahkan klik pada angka KEBUTUHAN, angka TELAH TERCUKUPI atau angka KEKURANGAN untuk melihat rincian alokasi biaya.</p> -->
+      
+      <div class="text-center mt-4">
+        <a href="/panduan-wakaf-pembangunan" target='blank' type="button" class="btn btn-sm btn-info mt-4 mx-2">Status RAB</a>
+        <a href="/panduan-wakaf-pembangunan" target='blank' type="button" class="btn btn-sm btn-success mt-4 mx-2">Daftar Wakaf</a>
+        <a href="/panduan-wakaf-pembangunan" target='blank' type="button" class="btn btn-sm btn-dark mt-4 mx-2">Konfirmasi Wakaf</a>
+      </div>
+
     </div>
   </section>
 
@@ -62,7 +69,7 @@
           <p class="mb-4">Untuk menyalurkan donasi Anda mohon untuk <strong>meluangkan waktu</strong> sejenak untuk membaca <strong>Petunjuk dan Rincian Anggaran </strong>dengan cara klik tombol "Panduan Wakaf" dibawah ini;</p>
           
           <div class="text-center">
-            <a href="/panduan-wakaf-pembangunan" type="button" class="btn btn-lg btn-info mb-4 justify-content-center">Panduan Wakaf</a>
+            <a href="/panduan-wakaf-pembangunan" type="button" target="blank" class="btn btn-lg btn-info mb-4 justify-content-center">Panduan Wakaf</a>
           </div>
 
           <p class="mb-4">Jika Anda ada pertanyaan terkait proyek pembangunan gedung pondok pesantren Markaz Tahfid Al Qur’an Zaid Bin Tsabit silakan hubungi kontak berikut :</p>

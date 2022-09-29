@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Budgeting;
+use App\Models\Donate;
 
 class DatabaseSeeder extends Seeder
 {
@@ -29,20 +30,21 @@ class DatabaseSeeder extends Seeder
 
         // this one put from the factory
         User::factory(3)->create();
+        Donate::factory(200)->create();
 
         Category::create([
-            'name' => 'Web Programming',
-            'slug' => 'web-programming',
+            'name' => 'Ulumul Quran',
+            'slug' => 'ulumul-quran',
         ]);
 
         Category::create([
-            'name' => 'Web Design',
-            'slug' => 'web-design',
+            'name' => 'Bahasa Arab',
+            'slug' => 'bahasa-arab',
         ]);
 
         Category::create([
-            'name' => 'Personal',
-            'slug' => 'personal',
+            'name' => 'Tauhid',
+            'slug' => 'tauhid',
         ]);
 
         Post::factory(20)->create();

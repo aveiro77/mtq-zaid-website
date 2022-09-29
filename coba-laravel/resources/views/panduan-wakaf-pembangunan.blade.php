@@ -24,7 +24,11 @@
                         <div style="height: 8px" class="progress rounded-pill">
                             <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%" class="progress-bar progress-bar-striped progress-bar-animated rounded-pill"></div>
                         </div>
-                        <a href="http://wa.me/62{{ $rab->cp_hp }}" target="blank" type="button" class="btn btn-sm btn-primary mt-4">Konfirmasi</a>
+                        <a href="http://wa.me/62{{ $rab->cp_hp }}" target="blank" type="button" class="btn btn-sm btn-primary mt-4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Konfirmasi setelah transfer wakaf">Konfirmasi</a>
+                        
+                        {{-- <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+                          Tooltip on bottom
+                        </button> --}}
                     </div>
                   </div>
                 @endforeach
