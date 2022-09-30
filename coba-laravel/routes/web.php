@@ -10,6 +10,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\WakafPembangunanController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,12 +56,14 @@ Route::get('/categories', function () {
     ]);
 });
 
-Route::get('/wakaf-pembangunan', function () {
-    return view('wakaf-pembangunan', [
-        'title' => 'Wakaf Pembangunan',
-        'active' => 'wakaf'
-    ]);
-});
+
+Route::get('/wakaf-pembangunan', [WakafPembangunanController::class, 'index']);
+// Route::get('/wakaf-pembangunan', function () {
+//     return view('wakaf-pembangunan', [
+//         'title' => 'Wakaf Pembangunan',
+//         'active' => 'wakaf'
+//     ]);
+// });
 
 Route::get('/panduan-wakaf-pembangunan', function () {
     return view('panduan-wakaf-pembangunan', [

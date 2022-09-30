@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Donate extends Model
 {
     use HasFactory;
+
+    public function budgetings()
+    {
+        return $this->belongsTo(Budgeting::class);
+    }
 }

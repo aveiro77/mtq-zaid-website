@@ -8,28 +8,28 @@
         <div class="col-lg-4">
           <div aria-label="breadcrumb" class="nav">
             <ol class="breadcrumb">
-              <li aria-current="page" class="breadcrumb-item active">Kebutuhan Dana</li>
+              <li aria-current="page" class="breadcrumb-item active">Kebutuhan Dana <strong>(100%)</strong></li>
             </ol>
           </div>
-          <h2 class="lined text-info">Rp. 5.890.500.000</h2>
+          <h2 class="lined text-info">Rp. {{ number_format($budgets,2,",",".") }}</h2>
           <!-- <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p> -->
         </div>
         <div class="col-lg-4">
           <div aria-label="breadcrumb" class="nav">
             <ol class="breadcrumb">
-              <li aria-current="page" class="breadcrumb-item active">Telah Terpenuhi</li>
+              <li aria-current="page" class="breadcrumb-item active">Telah Terpenuhi <strong>({{ round(($donates/$budgets)*100, 1) }}%)</strong></li>
             </ol>
           </div>
-          <h2 class="lined text-success">Rp. 1.890.500.000</h2>
+          <h2 class="lined text-success">Rp. {{ number_format($donates,2,",",".") }}</h2>
           <!-- <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p> -->
         </div>
         <div class="col-lg-4">
           <div aria-label="breadcrumb" class="nav">
             <ol class="breadcrumb">
-              <li aria-current="page" class="breadcrumb-item active">Kekurangan</li>
+              <li aria-current="page" class="breadcrumb-item active">Kekurangan <strong>({{ round((($budgets-$donates)/$budgets)*100, 1) }}%)</strong></li>
             </ol>
           </div>
-          <h2 class="lined text-danger">Rp. 4.000.000.000</h2>
+          <h2 class="lined text-danger">Rp. {{ number_format($budgets-$donates,2,",",".") }}</h2>
           <!-- <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p> -->
         </div>
       </div>
@@ -43,6 +43,7 @@
 
     </div>
   </section>
+
 
   <section class="py-2">
     <div class="container py-2">
