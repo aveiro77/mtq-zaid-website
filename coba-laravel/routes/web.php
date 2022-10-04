@@ -58,22 +58,8 @@ Route::get('/categories', function () {
 
 
 Route::get('/wakaf-pembangunan', [WakafPembangunanController::class, 'index']);
-
-Route::get('/panduan-wakaf-pembangunan', function () {
-    return view('panduan-wakaf-pembangunan', [
-        'title' => 'Panduan Wakaf Pembangunan',
-        'active' => 'wakaf',
-        'budgetings' => Budgeting::all(),
-    ]);
-});
-
-Route::get('/status-rab', function () {
-    return view('status-rab', [
-        'title' => 'Status RAB',
-        'active' => 'wakaf',
-        'budgetings' => Budgeting::all(),
-    ]);
-});
+Route::get('/panduan-wakaf-pembangunan', [WakafPembangunanController::class, 'wakafGuide']);
+Route::get('/status-rab', [WakafPembangunanController::class, 'budgetingStatus']);
 
 Route::get('/kontak', function () {
     return view('contact', [

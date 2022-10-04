@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Budgeting;
 use App\Models\Donate;
+use Illuminate\Support\Facades\DB;
 
 class WakafPembangunanController extends Controller
 {
@@ -15,6 +15,24 @@ class WakafPembangunanController extends Controller
             'active' => 'wakaf',
             'budgets' => Budgeting::sum('budget'),
             'donates' => Donate::sum('nominal')
+        ]);
+    }
+
+    public function budgetingStatus()
+    {
+        return view('status-rab', [
+            'title' => 'Status RAB',
+            'active' => 'wakaf',
+            'budgetings' => DB::table('vdonations')->get(),
+        ]);
+    }
+
+    public function wakafGuide()
+    {
+        return view('panduan-wakaf-pembangunan', [
+            'title' => 'Panduan Wakaf Pembangunan',
+            'active' => 'wakaf',
+            'budgetings' => DB::table('vdonations')->get(),
         ]);
     }
 }

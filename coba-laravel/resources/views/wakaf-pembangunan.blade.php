@@ -36,7 +36,7 @@
       <!-- <p class="lead my-4">Silahkan klik pada angka KEBUTUHAN, angka TELAH TERCUKUPI atau angka KEKURANGAN untuk melihat rincian alokasi biaya.</p> -->
       
       <div class="text-center mt-4">
-        <a href="/panduan-wakaf-pembangunan" target='blank' type="button" class="btn btn-sm btn-info mt-4 mx-2">Status RAB</a>
+        <a href="/status-rab" target='blank' type="button" class="btn btn-sm btn-info mt-4 mx-2">Status RAB</a>
         <a href="/panduan-wakaf-pembangunan" target='blank' type="button" class="btn btn-sm btn-success mt-4 mx-2">Daftar Wakaf</a>
         <a href="/panduan-wakaf-pembangunan" target='blank' type="button" class="btn btn-sm btn-dark mt-4 mx-2">Konfirmasi Wakaf</a>
       </div>
