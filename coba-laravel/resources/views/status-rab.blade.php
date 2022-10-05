@@ -6,7 +6,7 @@
       
       <div class="row">
         <div class="col-lg">
-          <table class="table table-hover">
+          <table class="table table-hover table-sm">
             <thead class="bg-dark text-white">
               <tr>
                 <th>#</th>

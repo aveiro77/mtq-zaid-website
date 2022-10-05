@@ -60,6 +60,7 @@ Route::get('/categories', function () {
 Route::get('/wakaf-pembangunan', [WakafPembangunanController::class, 'index']);
 Route::get('/panduan-wakaf-pembangunan', [WakafPembangunanController::class, 'wakafGuide']);
 Route::get('/status-rab', [WakafPembangunanController::class, 'budgetingStatus']);
+Route::get('/daftar-wakaf', [WakafPembangunanController::class, 'wakafList']);
 
 Route::get('/kontak', function () {
     return view('contact', [

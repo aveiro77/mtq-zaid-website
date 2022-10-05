@@ -27,6 +27,15 @@ class WakafPembangunanController extends Controller
         ]);
     }
 
+    public function wakafList()
+    {
+        return view('wakaf-list', [
+            'title' => 'Daftar Wakaf',
+            'active' => 'wakaf',
+            'wakaf' => Donate::all()
+        ]);
+    }
+
     public function wakafGuide()
     {
         return view('panduan-wakaf-pembangunan', [
