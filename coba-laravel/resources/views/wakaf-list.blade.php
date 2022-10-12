@@ -7,7 +7,7 @@
       <div class="row justify-content-left mb-3">
         <div class="col-md-6">
             {{-- <form action="/posts" method="get"> --}}
-            <form action="/wakaf-pembangunan" method="get">
+            <form action="/daftar-wakaf" method="get">
                
                 @if (request('name'))
                     <input type="hidden" name="name" value="{{ request('name') }}">
@@ -42,24 +42,32 @@
             <tbody>
                 <?php $i=1 ?>
                 <?php $tsummary=0 ?>
-                @foreach($wakaf as $w)
-                    <tr>
-                        <td>{{ $i }}</td>
-                        <td>{{ $w->name }}</td>
-                        <td>{{ $w->address }}</td>
-                        <td>{{ $w->phone }}</td>
-                        {{-- <td>{{ sprintf("%03d", $w->budgeting_id) }}</td> --}}
-                        <td>{{ $w->budgeting->description }}</td>
-                        <td>{{ date_format(date_create($w->donate_date),"d/m/Y") }}</td>
-                        <td class="text-right">{{ number_format($w->nominal,2,",",".") }}</td>
-                    </tr>
-                    <?php $i++ ?>
-                    <?php $tsummary=$tsummary+$w->nominal ?>
-                @endforeach
-                <tr class="bg-dark text-white">
-                  <td class="text-center" colspan="6">TOTAL</td>
-                  <td class="text-right">{{ number_format($tsummary,2,",",".") }}</td>
-              </tr>
+
+                @if($wakaf->count())
+
+                  @foreach($wakaf as $w)
+                      <tr>
+                          <td>{{ $i }}</td>
+                          <td>{{ $w->name }}</td>
+                          <td>{{ $w->address }}</td>
+                          <td>{{ $w->phone }}</td>
+                          {{-- <td>{{ sprintf("%03d", $w->budgeting_id) }}</td> --}}
+                          <td>{{ $w->budgeting->description }}</td>
+                          <td>{{ date_format(date_create($w->donate_date),"d/m/Y") }}</td>
+                          <td class="text-right">{{ number_format($w->nominal,2,",",".") }}</td>
+                      </tr>
+                      <?php $i++ ?>
+                      <?php $tsummary=$tsummary+$w->nominal ?>
+                  @endforeach
+                  <tr class="bg-dark text-white">
+                    <td class="text-center" colspan="6">TOTAL</td>
+                    <td class="text-right">{{ number_format($tsummary,2,",",".") }}</td>
+                  </tr>                   
+                @else
+                  <tr>
+                    <td colspan="7" class="text-center">No data found</td>
+                  </tr>
+                @endif                
             </tbody>
           </table>
         </div>
