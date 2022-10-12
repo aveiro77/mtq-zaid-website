@@ -12,7 +12,6 @@
             </ol>
           </div>
           <h2 class="lined text-info">Rp. {{ number_format($budgets,2,",",".") }}</h2>
-          <!-- <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p> -->
         </div>
         <div class="col-lg-4">
           <div aria-label="breadcrumb" class="nav">
@@ -21,7 +20,6 @@
             </ol>
           </div>
           <h2 class="lined text-success">Rp. {{ number_format($donates,2,",",".") }}</h2>
-          <!-- <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p> -->
         </div>
         <div class="col-lg-4">
           <div aria-label="breadcrumb" class="nav">
@@ -30,10 +28,8 @@
             </ol>
           </div>
           <h2 class="lined text-danger">Rp. {{ number_format($budgets-$donates,2,",",".") }}</h2>
-          <!-- <p class="lead my-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p> -->
         </div>
       </div>
-      <!-- <p class="lead my-4">Silahkan klik pada angka KEBUTUHAN, angka TELAH TERCUKUPI atau angka KEKURANGAN untuk melihat rincian alokasi biaya.</p> -->
       
       <div class="text-center mt-4">
         <a href="/status-rab" target='blank' type="button" class="btn btn-sm btn-info mt-4 mx-2">Status RAB</a>

@@ -23,7 +23,7 @@
                 @foreach($budgetings as $rab)
                     <tr>
                         <td>{{ $i }}</td>
-                        <td>{{ $rab->description }}</td>
+                        <td><a href="/daftar-wakaf/{{ $rab->slug }}"> {{ $rab->description }}</a></td>
                         <td class="text-right">{{ number_format($rab->budget,2,",",".") }}</td>
                         <td class="text-right">{{ number_format($rab->donations,2,",",".") }}</td>
                         <td class="text-right">{{ number_format(($rab->donations/$rab->budget)*100,2,",",".") }}%</td>

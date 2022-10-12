@@ -61,6 +61,14 @@ Route::get('/wakaf-pembangunan', [WakafPembangunanController::class, 'index']);
 Route::get('/panduan-wakaf-pembangunan', [WakafPembangunanController::class, 'wakafGuide']);
 Route::get('/status-rab', [WakafPembangunanController::class, 'budgetingStatus']);
 Route::get('/daftar-wakaf', [WakafPembangunanController::class, 'wakafList']);
+Route::get('/daftar-wakaf/{budgeting:slug}', function (Budgeting $budgeting) {
+    return view('wakaf-list', [
+        'title' => 'Daftar Wakaf',
+        'active' => 'wakaf',
+        // 'wakaf' => $budgeting->donates //harus sesuai dengan relasi pada model budgeting function donates
+        'wakaf' => $budgeting->donates->load('budgeting')
+    ]);
+});
 
 Route::get('/kontak', function () {
     return view('contact', [
