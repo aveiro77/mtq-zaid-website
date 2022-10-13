@@ -9,19 +9,18 @@ class Donate extends Model
 {
     use HasFactory;
 
-    // protected $with = ['budgeting', 'donations'];
+    protected $with = ['budgeting'];
 
-    // public function scopeFilter($query, array $filters)
-    // {
-    //     $query->when($filters['search'] ?? false, function ($query, $search) {
-    //         return $query->where(function ($query) use ($search) {
-    //             $query->where('name', 'like', '%' . $search . '%')->orWhere('address', 'like', '%' . $search . '%');
-    //         });
-    //     });
+    public function scopeFilter($query)
+    {
+        if (request('search')) {
+            return $query->where('name', 'like', '%' . request('search') . '%')
+                ->orWhere('address', 'like', '%' . request('search') . '%');
+        }
 
 
-    //     $query->when($filters['donations'] ?? false, fn ($query, $donations) => $query->whereHas('donations', fn ($query) => $query->where('budgeting_id', $donations)));
-    // }
+        //$query->when($filters['donations'] ?? false, fn ($query, $donations) => $query->whereHas('donations', fn ($query) => $query->where('budgeting_id', $donations)));
+    }
 
     public function budgeting()
     {

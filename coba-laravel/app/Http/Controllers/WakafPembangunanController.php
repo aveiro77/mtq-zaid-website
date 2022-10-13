@@ -48,17 +48,16 @@ class WakafPembangunanController extends Controller
     public function wakafList()
     {
 
-        $wakaf = Donate::with('budgeting')->latest();
-
-        if (request('search')) {
-            $wakaf->where('name', 'like', '%' . request('search') . '%')
-                ->orWhere('address', 'like', '%' . request('search') . '%');
-        }
+        // if (request('search')) {
+        //     $wakaf->where('name', 'like', '%' . request('search') . '%')
+        //         ->orWhere('address', 'like', '%' . request('search') . '%');
+        // }
 
         return view('wakaf-list', [
             'title' => 'Daftar Wakaf',
             'active' => 'wakaf',
-            'wakaf' => $wakaf->get()
+            // 'wakaf' => Donate::with('budgeting')->latest()->filter()->get()
+            'wakaf' => Donate::with('budgeting')->latest()->filter()->paginate(15)
 
         ]);
     }
