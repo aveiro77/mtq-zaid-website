@@ -1,15 +1,17 @@
 <?php
 
-use App\Http\Controllers\AdminCategoryController;
-use App\Models\Category;
 use App\Models\Post;
+use App\Models\Category;
 use App\Models\Budgeting;
-
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\AdminBudgetingController;
+use App\Http\Controllers\AdminDonateController;
 use App\Http\Controllers\WakafPembangunanController;
 
 /*
@@ -66,7 +68,8 @@ Route::get('/daftar-wakaf/{budgeting:slug}', function (Budgeting $budgeting) {
         'title' => 'Daftar Wakaf',
         'active' => 'wakaf',
         // 'wakaf' => $budgeting->donates //harus sesuai dengan relasi pada model budgeting function donates
-        'wakaf' => $budgeting->donates->load('budgeting')
+        'wakaf' => $budgeting->donates->load('budgeting'),
+        'paginate' => 0
     ]);
 });
 
@@ -111,3 +114,5 @@ Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'check
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/budgeting', AdminBudgetingController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/donate', AdminDonateController::class)->except('show')->middleware('admin');

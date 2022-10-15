@@ -57,7 +57,8 @@ class WakafPembangunanController extends Controller
             'title' => 'Daftar Wakaf',
             'active' => 'wakaf',
             // 'wakaf' => Donate::with('budgeting')->latest()->filter()->get()
-            'wakaf' => Donate::with('budgeting')->latest()->filter()->paginate(15)
+            'wakaf' => Donate::with('budgeting')->latest()->filter()->paginate(25),
+            'paginate' => 1
 
         ]);
     }

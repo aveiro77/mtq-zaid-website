@@ -19,6 +19,22 @@
             Post Categories  
           </a>
         </li>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-item-center px-3 mt-4 mb-1 text-muted">
+          <span>Wakaf Pembangunan</span>
+        </h6>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/budgeting*') ? 'active' : '' }}" href="/dashboard/budgeting">
+            <span data-feather="layers"></span>
+            RAB  
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/donate*') ? 'active' : '' }}" href="/dashboard/donate">
+            <span data-feather="file-text"></span>
+            Daftar Wakaf  
+          </a>
+        </li>
       </ul>
 
       {{-- @can('admin')

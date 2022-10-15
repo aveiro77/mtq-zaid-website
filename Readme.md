@@ -22,3 +22,6 @@ isi file htaccess tsb :
 </IfModule>
 
 ############## BATAS ##################
+
+buat symlink dengan cronjobs, contoh:
+ln -s /home/busanaut/laravel/storage/app/public /home/busanaut/public_html/zaid/storage

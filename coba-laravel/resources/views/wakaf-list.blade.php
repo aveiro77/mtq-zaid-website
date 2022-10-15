@@ -23,8 +23,7 @@
                 </div>
             </form>
         </div>
-    </div>
-      
+    </div>      
       <div class="row">
         <div class="col-lg">
           <table class="table table-hover table-sm">
@@ -67,7 +66,9 @@
                   </tr>
                 @endif   
                 
-                {{ $wakaf->links() }}
+                @if($paginate)
+                  {{ $wakaf->links() }}
+                @endif
 
             </tbody>
           </table>
