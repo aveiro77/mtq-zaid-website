@@ -7,7 +7,7 @@
 
 <div class="table-responsive">
 
-  <a href="/dashboard/budgeting/create" class="btn btn-sm btn-primary mb-3">Tambah RAB</a>
+  <a href="/dashboard/budgets/create" class="btn btn-sm btn-primary mb-3">Tambah RAB</a>
 
   @if(session()->has('success')) 
 
@@ -32,19 +32,19 @@
         </thead>
         <tbody>
          
-        @foreach ($budgeting as $rab)
+        @foreach ($budgets as $rab)
             
           <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $rab->description }}</td>
             <td align="right">{{ number_format($rab->budget,2,",",".") }}</td>
             <td align="center">
-              <a href="/dashboard/categories/{{ $rab->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/categories/{{ $rab->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-              <form action="/dashboard/categories/{{ $rab->slug }}" method="post" class="d-inline">
+              <a href="/dashboard/budgets/{{ $rab->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/budgets/{{ $rab->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <form action="/dashboard/budgets/{{ $rab->slug }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
-                <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?') "><span data-feather="x-circle"></span></button>
+                <button class="badge bg-danger border-0" onclick="return confirm('1 RAB akah dihapus, Anda yakin?') "><span data-feather="x-circle"></span></button>
               </form>
             </td>
           </tr>

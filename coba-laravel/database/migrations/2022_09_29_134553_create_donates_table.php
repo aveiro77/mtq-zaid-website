@@ -15,7 +15,7 @@ class CreateDonatesTable extends Migration
     {
         Schema::create('donates', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('budgeting_id');
+            $table->foreignId('budget_id');
             $table->string('name');
             $table->string('address');
             $table->string('phone');

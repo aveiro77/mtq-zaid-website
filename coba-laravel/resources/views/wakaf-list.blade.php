@@ -50,7 +50,7 @@
                           <td>{{ $w->address }}</td>
                           <td>{{ $w->phone }}</td>
                           {{-- <td>{{ sprintf("%03d", $w->budgeting_id) }}</td> --}}
-                          <td>{{ $w->budgeting->description }}</td>
+                          <td>{{ $w->budget->description }}</td>
                           <td class="text-right">{{ number_format($w->nominal,2,",",".") }}</td>
                       </tr>
                       <?php $i++ ?>

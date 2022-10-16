@@ -67,8 +67,8 @@ class AdminDonateController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Donate  $donate
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Models\Donate $donate
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Donate $donate)

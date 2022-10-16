@@ -20,7 +20,7 @@
                 <?php $i=1 ?>
                 <?php $tbudgets=0 ?>
                 <?php $tdonations=0 ?>
-                @foreach($budgetings as $rab)
+                @foreach($budgets as $rab)
                     <tr>
                         <td>{{ $i }}</td>
                         <td><a href="/daftar-wakaf/{{ $rab->slug }}"> {{ $rab->description }}</a></td>

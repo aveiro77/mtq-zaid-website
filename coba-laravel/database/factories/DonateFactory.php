@@ -23,7 +23,7 @@ class DonateFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'budgeting_id' => mt_rand(1, 19),
+            'budget_id' => mt_rand(1, 19),
             'address' => $this->faker->address(),
             'phone' => $this->faker->phoneNumber(),
             'nominal' => mt_rand(50000, 3500000),

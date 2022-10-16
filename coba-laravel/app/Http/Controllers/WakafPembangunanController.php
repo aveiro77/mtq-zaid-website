@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Budgeting;
+use App\Models\Budget;
 use App\Models\Donate;
 use Illuminate\Support\Facades\DB;
 
@@ -14,13 +14,13 @@ class WakafPembangunanController extends Controller
         return view('wakaf-pembangunan', [
             'title' => 'Wakaf Pembangunan',
             'active' => 'wakaf',
-            'budgets' => Budgeting::sum('budget'),
+            'budgets' => Budget::sum('budget'),
             'donates' => Donate::sum('nominal')
             //'donates' => Donate::latest()->filter(request(['search', 'name', 'address']))->paginate(7)->withQueryString(), //agar paginationnya jalan ketika searching
         ]);
     }
 
-    public function budgetingStatus()
+    public function budgetStatus()
     {
         $vdonations = DB::select(
             'SELECT
@@ -32,16 +32,16 @@ class WakafPembangunanController extends Controller
                                 `a`.`unicode` AS `unicode`,
                                 `a`.`cp_hp` AS `cp_hp`
                              FROM
-                                (`wpu_blog`.`budgetings` `a`
-                                    LEFT JOIN (SELECT `b`.`budgeting_id` AS `budgeting_id`, SUM(`b`.`nominal`) AS `donations`
+                                (`wpu_blog`.`budgets` `a`
+                                    LEFT JOIN (SELECT `b`.`budget_id` AS `budget_id`, SUM(`b`.`nominal`) AS `donations`
                                                FROM `wpu_blog`.`donates` `b`
-                                               GROUP BY `b`.`budgeting_id`) `b` ON (`a`.`id` = `b`.`budgeting_id`))'
+                                               GROUP BY `b`.`budget_id`) `b` ON (`a`.`id` = `b`.`budget_id`))'
         );
 
         return view('status-rab', [
             'title' => 'Status RAB',
             'active' => 'wakaf',
-            'budgetings' => $vdonations
+            'budgets' => $vdonations
         ]);
     }
 
@@ -56,8 +56,8 @@ class WakafPembangunanController extends Controller
         return view('wakaf-list', [
             'title' => 'Daftar Wakaf',
             'active' => 'wakaf',
-            // 'wakaf' => Donate::with('budgeting')->latest()->filter()->get()
-            'wakaf' => Donate::with('budgeting')->latest()->filter()->paginate(25),
+            // 'wakaf' => Donate::with('budget')->latest()->filter()->get()
+            'wakaf' => Donate::with('budget')->latest()->filter()->paginate(25),
             'paginate' => 1
 
         ]);
@@ -76,17 +76,17 @@ class WakafPembangunanController extends Controller
                                 `a`.`unicode` AS `unicode`,
                                 `a`.`cp_hp` AS `cp_hp`
                              FROM
-                                (`wpu_blog`.`budgetings` `a`
-                                    LEFT JOIN (SELECT `b`.`budgeting_id` AS `budgeting_id`, SUM(`b`.`nominal`) AS `donations`
+                                (`wpu_blog`.`budgets` `a`
+                                    LEFT JOIN (SELECT `b`.`budget_id` AS `budget_id`, SUM(`b`.`nominal`) AS `donations`
                                                FROM `wpu_blog`.`donates` `b`
-                                               GROUP BY `b`.`budgeting_id`) `b` ON (`a`.`id` = `b`.`budgeting_id`))'
+                                               GROUP BY `b`.`budget_id`) `b` ON (`a`.`id` = `b`.`budget_id`))'
         );
 
         return view('panduan-wakaf-pembangunan', [
             'title' => 'Panduan Wakaf Pembangunan',
             'active' => 'wakaf',
-            // 'budgetings' => DB::table('vdonations')->get(),
-            'budgetings' => $vdonations,
+            // 'budgets' => DB::table('vdonations')->get(),
+            'budgets' => $vdonations,
         ]);
     }
 }

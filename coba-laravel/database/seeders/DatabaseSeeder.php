@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
-use App\Models\Budgeting;
+use App\Models\Budget;
 use App\Models\Donate;
 
 class DatabaseSeeder extends Seeder
@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(20)->create();
 
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Persiapan/ Umum',
             'slug' => 'pekerjaan-persiapan-umum',
             'budget' => 44469600,
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Tanah',
             'slug' => 'pekerjaan-tanah',
             'budget' => 147182183,
@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Struktur Lantai 1',
             'slug' => 'pekerjaan-struktur-lantai1',
             'budget' => 1555066206,
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Arsitektur Lantai 1',
             'slug' => 'pekerjaan-arsitektur-lantai1',
             'budget' => 485719171,
@@ -81,7 +81,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 1',
             'slug' => 'pekerjaan-mekanikal-elektikal-lantai1',
             'budget' => 62997860,
@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Struktur Lantai 2',
             'slug' => 'pekerjaan-struktur-lantai2',
             'budget' => 671046165,
@@ -97,7 +97,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Arsitektur Lantai 2',
             'slug' => 'pekerjaan-arsitektur-lantai2',
             'budget' => 431774974,
@@ -105,7 +105,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 2',
             'slug' => 'pekerjaan-mekanikal-elektikal-lantai2',
             'budget' => 69796870,
@@ -113,7 +113,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Struktur Lantai 3',
             'slug' => 'pekerjaan-struktur-lantai3',
             'budget' => 671640160,
@@ -121,7 +121,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Arsitektur Lantai 3',
             'slug' => 'pekerjaan-arsitektur-lantai3',
             'budget' => 458468141,
@@ -129,7 +129,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 3',
             'slug' => 'pekerjaan-mekanikal-elektikal-lantai3',
             'budget' => 71657610,
@@ -137,7 +137,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Struktur Lantai 4',
             'slug' => 'pekerjaan-struktur-lantai4',
             'budget' => 168593066,
@@ -145,7 +145,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Arsitektur Lantai 4',
             'slug' => 'pekerjaan-arsitektur-lantai4',
             'budget' => 647962309,
@@ -153,7 +153,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Mekanikal & Elektikal Lantai 4',
             'slug' => 'pekerjaan-mekanikal-elektikal-lantai4',
             'budget' => 100548150,
@@ -161,7 +161,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Paving Block',
             'slug' => 'pekerjaan-paving-block',
             'budget' => 27238000,
@@ -169,7 +169,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Pagar',
             'slug' => 'pekerjaan-pagar',
             'budget' => 103979559,
@@ -177,7 +177,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pengadaan AC',
             'slug' => 'pengadaan-ac',
             'budget' => 167370000,
@@ -185,7 +185,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Hydran',
             'slug' => 'pekerjaan-hydran',
             'budget' => 750000000,
@@ -193,7 +193,7 @@ class DatabaseSeeder extends Seeder
             'cp_hp' => '85740074567',
             'cp_name' => 'Fulan',
         ]);
-        Budgeting::create([
+        Budget::create([
             'description' => 'Pekerjaan Mebelair',
             'slug' => 'pekerjaan-mebelair',
             'budget' => 101900000,

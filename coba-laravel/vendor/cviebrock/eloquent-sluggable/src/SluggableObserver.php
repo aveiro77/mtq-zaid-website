@@ -1,4 +1,6 @@
-<?php namespace Cviebrock\EloquentSluggable;
+<?php
+
+namespace Cviebrock\EloquentSluggable;
 
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Contracts\Events\Dispatcher;

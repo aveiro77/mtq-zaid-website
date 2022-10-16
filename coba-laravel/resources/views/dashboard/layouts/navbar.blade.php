@@ -24,7 +24,7 @@
           <span>Wakaf Pembangunan</span>
         </h6>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/budgeting*') ? 'active' : '' }}" href="/dashboard/budgeting">
+          <a class="nav-link {{ Request::is('dashboard/budgets*') ? 'active' : '' }}" href="/dashboard/budgets">
             <span data-feather="layers"></span>
             RAB  
           </a>

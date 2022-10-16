@@ -14,18 +14,18 @@ class PostController extends Controller
         $title = '';
         if (request('category')) {
             $category = Category::firstWhere('slug', request('category'));
-            $title = ' in ' . $category->name;
+            $title = ' dalam ' . $category->name;
         }
 
         if (request('author')) {
             $author = User::firstWhere('username', request('author'));
-            $title = ' by ' . $author->name;
+            $title = ' oleh ' . $author->name;
         }
 
         //$posts = Post::latest();
 
         return view('posts', [
-            'title' => 'All Posts' . $title,
+            'title' => 'Semua Pos' . $title,
             //'posts' => Post::all() //untuk menampilkan semua data
             //'posts' => Post::latest()->get(), //untuk menampilkan semua data berdasarkan post terakhir
             //'posts' => $posts->get(), //untuk menampilkan semua data berdasarkan post terakhir
