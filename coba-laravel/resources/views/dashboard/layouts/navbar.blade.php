@@ -30,7 +30,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/donate*') ? 'active' : '' }}" href="/dashboard/donate">
+          <a class="nav-link {{ Request::is('dashboard/donates*') ? 'active' : '' }}" href="/dashboard/donates">
             <span data-feather="file-text"></span>
             Daftar Wakaf  
           </a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Donate;
+use App\Models\Budget;
 use Illuminate\Http\Request;
 
 class AdminDonateController extends Controller
@@ -14,9 +15,22 @@ class AdminDonateController extends Controller
      */
     public function index()
     {
+
+        if (request('budget')) {
+            $budget = Budget::firstWhere('slug', request('budget'));
+        }
+
+        if (request('name')) {
+            $name = Donate::firstWhere('name', request('name'));
+        }
+
+        if (request('address')) {
+            $address = Donate::firstWhere('address', request('address'));
+        }
+
         return view('dashboard.donate.index', [
             // 'donate' => Donate::all(),
-            'donate' => Donate::latest()->paginate(50),
+            'donate' => Donate::latest()->filter(request(['search', 'budget', 'name', 'address']))->paginate(50),
             'total' => Donate::sum('nominal')
         ]);
     }

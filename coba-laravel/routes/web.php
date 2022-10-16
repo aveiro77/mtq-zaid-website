@@ -44,6 +44,7 @@ Route::get('/ ', function () {
 // });
 
 Route::get('/posts', [PostController::class, 'index']);
+Route::get('/donates', [AdminDonateController::class, 'index']);
 
 //single post
 //Route::get('posts/{slug} ', [PostController::class, 'show']);
@@ -117,4 +118,4 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->except
 Route::get('/dashboard/budgets/checkSlug', [AdminBudgetController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/budgets', AdminBudgetController::class)->middleware('admin');
 
-Route::resource('/dashboard/donate', AdminDonateController::class)->except('show')->middleware('admin');
+Route::resource('/dashboard/donates', AdminDonateController::class)->except('show')->middleware('admin');
