@@ -42,7 +42,9 @@ class AdminDonateController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.donate.create', [
+            'budgets' => Budget::all()
+        ]);
     }
 
     /**

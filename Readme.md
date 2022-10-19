@@ -25,3 +25,4 @@ isi file htaccess tsb :
 
 buat symlink dengan cronjobs, contoh:
 ln -s /home/busanaut/laravel/storage/app/public /home/busanaut/public_html/zaid/storage
+ln -s /home/marr2961/laravel/storage/app/public /home/marr2961/public_html/testing/storage

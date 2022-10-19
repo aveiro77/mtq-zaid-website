@@ -17,10 +17,10 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <h5 class="lined lined-dark mb-3">Kategori Poluler</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="footer-link text-small">Graphic design</a></li>
+            {{-- <li><a href="#" class="footer-link text-small">Graphic design</a></li>
             <li><a href="#" class="footer-link text-small">Web design</a></li>
             <li><a href="#" class="footer-link text-small">Support</a></li>
-            <li><a href="#" class="footer-link text-small">Accounting</a></li>
+            <li><a href="#" class="footer-link text-small">Accounting</a></li> --}}
           </ul>
         </div>
         <div class="col-lg-4 col-md-6 mb-4">

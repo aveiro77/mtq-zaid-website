@@ -22,6 +22,7 @@ class CreateDonatesTable extends Migration
             $table->string('nominal');
             $table->string('showname');
             $table->date('donate_date');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

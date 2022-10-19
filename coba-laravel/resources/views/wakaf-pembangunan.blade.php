@@ -30,11 +30,14 @@
           <h2 class="lined text-danger">Rp. {{ number_format($budgets-$donates,2,",",".") }}</h2>
         </div>
       </div>
-      
-      <div class="text-center mt-4">
-        <a href="/status-rab" target='blank' type="button" class="btn btn-sm btn-info mt-4 mx-2">Status RAB</a>
-        <a href="/daftar-wakaf" target='blank' type="button" class="btn btn-sm btn-success mt-4 mx-2">Daftar Wakaf</a>
-        <a href="/panduan-wakaf-pembangunan" target='blank' type="button" class="btn btn-sm btn-dark mt-4 mx-2">Konfirmasi Wakaf</a>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="btn-group mt-5" role="group">
+            <a href="/status-rab" target='blank'type="button" class="btn btn-outline-primary">Status RAB</a>
+            <a href="/daftar-wakaf" type="button" class="btn btn-outline-primary">Daftar Wakaf</a>
+            <a href="/panduan-wakaf-pembangunan" type="button" class="btn btn-outline-primary">Panduan Wakaf</a>
+          </div>
+        </div>
       </div>
 
     </div>

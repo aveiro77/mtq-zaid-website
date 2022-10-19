@@ -7,7 +7,7 @@
 
 <div class="table-responsive">
 
-  <a href="/dashboard/donate/create" class="btn btn-sm btn-primary mb-3">Tambah Wakaf</a>
+  <a href="/dashboard/donates/create" class="btn btn-sm btn-primary mb-3">Tambah Wakaf</a>
 
   @if(session()->has('success')) 
 
