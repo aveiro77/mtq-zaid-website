@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Donate;
 use App\Models\Budget;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminDonateController extends Controller
 {
@@ -55,7 +56,25 @@ class AdminDonateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData =  $request->validate([
+            'name' => 'required|max:128',
+            'address' => 'required|max:255',
+            'phone' => 'required',
+            'nominal' => 'required',
+            'image' => 'image|file|max:1024',
+            'budget_id' => 'required',
+            'donate_date' => 'required'
+        ]);
+
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('bukti-wakaf-images');
+        }
+
+        $validatedData['showname'] = '1';
+
+        Donate::create($validatedData);
+
+        return redirect('/dashboard/donates')->with('success', 'A new data has been added!');
     }
 
     /**
@@ -98,8 +117,19 @@ class AdminDonateController extends Controller
      * @param  \App\Models\Donate  $donate
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Donate $donate)
+    public function destroy($id)
     {
-        //
+        $donate = Donate::find($id);
+
+        //delete the file
+        if ($donate->image) {
+            Storage::delete($donate->image);
+        }
+
+        //delete data on table
+        $donate->delete();
+        // Donate::destroy($donate->id);
+
+        return redirect('/dashboard/donates')->with('success', 'A data has been deleted!');
     }
 }

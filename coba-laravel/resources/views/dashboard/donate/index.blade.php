@@ -11,7 +11,7 @@
 
   @if(session()->has('success')) 
 
-    <div class="alert alert-success alert-dismissible fade show col-lg-8" role="alert">
+    <div class="alert alert-success alert-dismissible fade show col-lg-6" role="alert">
       {{ session('success') }}
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
@@ -68,7 +68,7 @@
             <td align="center">
               <a href="/dashboard/donates/{{ $wakaf }}" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/donates/{{ $wakaf }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-              <form action="/dashboard/donates/{{ $wakaf }}" method="post" class="d-inline">
+              <form action="/dashboard/donates/{{ $wakaf->id }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
                 <button class="badge bg-danger border-0" onclick="return confirm('Anda yakin?') "><span data-feather="x-circle"></span></button>
