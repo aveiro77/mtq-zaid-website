@@ -85,7 +85,9 @@ class AdminDonateController extends Controller
      */
     public function show(Donate $donate)
     {
-        //
+        return view('dashboard.donate.show', [
+            'donate' => $donate
+        ]);
     }
 
     /**
@@ -94,9 +96,13 @@ class AdminDonateController extends Controller
      * @param  \App\Models\Donate  $donate
      * @return \Illuminate\Http\Response
      */
-    public function edit(Donate $donate)
+    public function edit($id)
     {
-        //
+        return view('dashboard.donate.edit', [
+            'donate' => Donate::find($id),
+            'budgets' => Budget::all()
+            // 'categories' => Donate::all()
+        ]);
     }
 
     /**
@@ -106,9 +112,32 @@ class AdminDonateController extends Controller
      * @param  \App\Models\Donate $donate
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Donate $donate)
+    public function update($id, Request $request)
     {
-        //
+        $donate = Donate::find($id);
+
+        $rules = [
+            'name' => 'required|max:128',
+            'address' => 'required|max:255',
+            'phone' => 'required',
+            'nominal' => 'required',
+            'image' => 'image|file|max:1024',
+            'budget_id' => 'required',
+            'donate_date' => 'required'
+        ];
+
+        $validatedData =  $request->validate($rules);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('rab-images');
+        }
+
+        Donate::where('id', $donate->id)->update($validatedData);
+
+        return redirect('/dashboard/donates')->with('success', 'A post has been updated!');
     }
 
     /**

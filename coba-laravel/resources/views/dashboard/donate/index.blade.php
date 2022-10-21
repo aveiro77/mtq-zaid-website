@@ -66,8 +66,8 @@
             {{-- <td>{{ $wakaf->phone }}</td> --}}
             <td align="right">{{ number_format($wakaf->nominal,2,",",".") }}</td>
             <td align="center">
-              <a href="/dashboard/donates/{{ $wakaf }}" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/donates/{{ $wakaf }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="/dashboard/donates/{{ $wakaf->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/donates/{{ $wakaf->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
               <form action="/dashboard/donates/{{ $wakaf->id }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf

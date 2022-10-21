@@ -100,5 +100,7 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->except
 Route::get('/dashboard/budgets/checkSlug', [AdminBudgetController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/budgets', AdminBudgetController::class)->middleware('admin');
 
+Route::get('/dashboard/donates/{id}/edit', [AdminDonateController::class, 'edit'])->middleware('auth');
 Route::delete('/dashboard/donates/{id}', [AdminDonateController::class, 'destroy'])->middleware('auth');
+Route::put('/dashboard/donates/{id}', [AdminDonateController::class, 'update'])->middleware('admin');
 Route::resource('/dashboard/donates', AdminDonateController::class)->middleware('admin');
