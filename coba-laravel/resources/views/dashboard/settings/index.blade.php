@@ -46,31 +46,31 @@
             <td>Galeri</td>
             <td>Beranda</td>
             <td align="center">
-              <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
             <td>Kurikulum</td>
             <td>Akademik <span data-feather="arrow-right"></span> Kurikulum</td>
             <td align="center">
-              <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
             <td>Pengajar & Staff</td>
             <td>Akademik <span data-feather="arrow-right"></span> Pengajar & Staff</td>
             <td align="center">
-              <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
             <td>Pembangunan Gedung Baru</td>
             <td>Wakaf <span data-feather="arrow-right"></span> Pembangunan Gedung Baru</td>
             <td align="center">
-              <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/settings/static-page/pembangunan-gedung/show" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/settings/static-page/pembangunan-gedung/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
@@ -78,16 +78,16 @@
             <td>Operasional Pondok</td>
             <td>Wakaf <span data-feather="arrow-right"></span> Operasional Pondok</td>
             <td align="center">
-              <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
             <td>Kontak</td>
             <td>Kontak</td>
             <td align="center">
-              <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           

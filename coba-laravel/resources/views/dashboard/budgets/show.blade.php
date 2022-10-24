@@ -19,8 +19,6 @@
                 <div style="max-height: 350px; overflow:hidden;">
                     <img src="{{ asset('storage/'.$budget->image) }}" class="img-fluid mt-3">
                 </div>
-            @else
-                <img src="https://picsum.photos/1200/400?random=2" class="img-fluid mt-3">
             @endif
 
             {{-- <article class="my-3">

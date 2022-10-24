@@ -33,10 +33,10 @@
             <figure>
                 <img src="{{ asset('storage/'.$post->image) }}" class="w-100">
             </figure>
-        @else
+        {{-- @else
             <figure>
                 <img src="https://picsum.photos/1200/400?random=2" class="w-100">
-            </figure>
+            </figure> --}}
         @endif
         
             <section>

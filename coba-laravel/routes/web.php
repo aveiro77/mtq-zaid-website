@@ -111,4 +111,5 @@ Route::get('/dashboard/settings/static-pages', function () {
 })->middleware('admin');
 
 Route::get('/dashboard/settings/static-page/pembangunan-gedung/edit', [SetStaticPage05Controller::class, 'edit'])->middleware('auth');
+Route::get('/dashboard/settings/static-page/pembangunan-gedung/show', [SetStaticPage05Controller::class, 'show'])->middleware('auth');
 Route::put('/dashboard/settings/static-page/pembangunan-gedung/update', [SetStaticPage05Controller::class, 'update'])->middleware('admin');

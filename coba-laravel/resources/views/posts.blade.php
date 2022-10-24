@@ -30,8 +30,8 @@
                     <div style="max-height: 350px; overflow:hidden;">
                         <img src="{{ asset('storage/'.$posts[0]->image) }}" class="img-fluid" alt="{{  $posts[0]->category->name }}">
                     </div>
-                @else
-                <img src="https://picsum.photos/1200/400?random=2" class="card-img-top" alt="{{  $posts[0]->category->name }}">
+                {{-- @else
+                <img src="https://picsum.photos/1200/400?random=2" class="card-img-top" alt="{{  $posts[0]->category->name }}"> --}}
                 @endif
                 
                 <div class="card-body text-center">
@@ -54,8 +54,8 @@
                             </div>
                             @if($post->image)
                                 <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid" alt="{{  $posts[0]->category->name }}">
-                            @else
-                                <img src="https://picsum.photos/1200/700?random=2" class="card-img-top" alt="{{  $posts[0]->category->name }}">
+                            {{-- @else
+                                <img src="https://picsum.photos/1200/700?random=2" class="card-img-top" alt="{{  $posts[0]->category->name }}"> --}}
                             @endif
                             
                                 <div class="card-body">

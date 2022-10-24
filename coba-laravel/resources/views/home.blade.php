@@ -30,10 +30,10 @@
                   <a href="/posts/{{ $post->slug }}" class="d-block">
                     <img src="{{ asset('storage/'.$post->image) }}" alt="{{  $post->category->name }}" class="img-fluid mb-4">
                   </a>
-                  @else
+                  {{-- @else
                   <a href="/posts/{{ $post->slug }}" class="d-block">
                     <img src="https://picsum.photos/1200/700?random=2" alt="{{  $post->category->name }}" class="img-fluid mb-4">
-                  </a>
+                  </a> --}}
                 @endif
                 <h3 class="h5 mb-1"><a href="/posts/{{ $post->slug }}" class="text-dark">{{ $post->title }}</a></h3>
                 <small class="text-muted">

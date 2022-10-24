@@ -47,7 +47,9 @@ class SetStaticPage05Controller extends Controller
      */
     public function show(Set_static_page05 $set_static_page05)
     {
-        //
+        return view('dashboard.settings.set-static-page05.show', [
+            'staticpage' => $set_static_page05::find(1)
+        ]);
     }
 
     /**
