@@ -8,20 +8,29 @@
     </h1>
 </div> 
 
+@if(session()->has('success')) 
+
+    <div class="alert alert-success alert-dismissible fade show col-lg-8" role="alert">
+      {{ session('success') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+@endif
+
 <div class="table-responsive col-lg-8">
     <table class="table table-striped table-sm table-bordered">
         <thead>
           <tr class="text-center">
-            <th scope="col">Navigasi</th>
             <th scope="col">Halaman</th>
+            <th scope="col">Navigasi</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
          
           <tr>
-            <td>Beranda</td>
             <td>Profil</td>
+            <td>Beranda</td>
             <td align="center">
               <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
@@ -34,40 +43,40 @@
           </tr>
 
           <tr>
-            <td>Beranda</td>
             <td>Galeri</td>
+            <td>Beranda</td>
             <td align="center">
               <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
-            <td>Akademik <span data-feather="arrow-right"></span> Kurikulum</td>
             <td>Kurikulum</td>
+            <td>Akademik <span data-feather="arrow-right"></span> Kurikulum</td>
             <td align="center">
               <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
-            <td>Akademik <span data-feather="arrow-right"></span> Pengajar & Staff</td>
             <td>Pengajar & Staff</td>
+            <td>Akademik <span data-feather="arrow-right"></span> Pengajar & Staff</td>
             <td align="center">
               <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
-            <td>Wakaf <span data-feather="arrow-right"></span> Pembangunan Gedung Baru</td>
             <td>Pembangunan Gedung Baru</td>
+            <td>Wakaf <span data-feather="arrow-right"></span> Pembangunan Gedung Baru</td>
             <td align="center">
               <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="/dashboard/settings/static-page/pembangunan-gedung/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
-            <td>Wakaf <span data-feather="arrow-right"></span> Operasional Pondok</td>
             <td>Operasional Pondok</td>
+            <td>Wakaf <span data-feather="arrow-right"></span> Operasional Pondok</td>
             <td align="center">
               <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>

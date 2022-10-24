@@ -20,6 +20,7 @@ class CreateSetStaticPage05sTable extends Migration
             $table->text('body');
             $table->string('image');
             $table->string('caption');
+            $table->string('navigate');
         });
     }
 

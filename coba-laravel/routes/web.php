@@ -12,6 +12,7 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminBudgetController;
 use App\Http\Controllers\AdminDonateController;
+use App\Http\Controllers\SetStaticPage05Controller;
 use App\Http\Controllers\WakafPembangunanController;
 
 /*
@@ -109,4 +110,5 @@ Route::get('/dashboard/settings/static-pages', function () {
     return view('dashboard.settings.index');
 })->middleware('admin');
 
-Route::get('/dashboard/settings/pembangunan-gedung-baru', [AdminSetDonateController::class, 'edit'])->middleware('auth');
+Route::get('/dashboard/settings/static-page/pembangunan-gedung/edit', [SetStaticPage05Controller::class, 'edit'])->middleware('auth');
+Route::put('/dashboard/settings/static-page/pembangunan-gedung/update', [SetStaticPage05Controller::class, 'update'])->middleware('admin');

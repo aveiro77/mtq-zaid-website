@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Budget;
 use App\Models\Donate;
+use App\Models\Set_static_page05;
 use Illuminate\Support\Facades\DB;
 
 class WakafPembangunanController extends Controller
@@ -15,8 +16,8 @@ class WakafPembangunanController extends Controller
             'title' => 'Wakaf Pembangunan',
             'active' => 'wakaf',
             'budgets' => Budget::sum('budget'),
-            'donates' => Donate::sum('nominal')
-            //'donates' => Donate::latest()->filter(request(['search', 'name', 'address']))->paginate(7)->withQueryString(), //agar paginationnya jalan ketika searching
+            'donates' => Donate::sum('nominal'),
+            'static_page' => Set_static_page05::all(),
         ]);
     }
 
