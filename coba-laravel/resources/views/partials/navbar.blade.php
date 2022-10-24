@@ -13,7 +13,7 @@
               <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
                 <a href="/kurikulum" class="dropdown-item small text-uppercase">Kurikulum</a>
                 <a href="/staf-pengajar" class="dropdown-item small text-uppercase">Pengajar & Staff</a>
-                <a href="/psb" class="dropdown-item small text-uppercase">Penerimaan Santri Baru</a>
+                {{-- <a href="/psb" class="dropdown-item small text-uppercase">Penerimaan Santri Baru</a> --}}
               </div>
             </li>
             <li class="nav-item"><a href="/posts" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 {{ Request::is('posts') ? 'active' : '' }}">Blog </a>
@@ -21,8 +21,8 @@
             <li class="nav-item dropdown">
               <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle @if(Request::is('wakaf') or Request::is('wakaf-pembangunan') or Request::is('panduan-wakaf-pembangunan')) active @endif ">Wakaf</a>
               <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
-                <a href="/wakaf-pembangunan" class="dropdown-item small text-uppercase">Wakaf Pembangunan Gedung Baru</a>
-                <a href="/wakaf-operasional" class="dropdown-item small text-uppercase">Wakaf Operasional Pondok</a>
+                <a href="/wakaf-pembangunan" class="dropdown-item small text-uppercase">Pembangunan Gedung Baru</a>
+                <a href="/wakaf-operasional" class="dropdown-item small text-uppercase">Operasional Pondok</a>
               </div>
             </li>
             </li>

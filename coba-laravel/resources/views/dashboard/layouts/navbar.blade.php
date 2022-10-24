@@ -31,11 +31,26 @@
         </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/donates*') ? 'active' : '' }}" href="/dashboard/donates">
-            <span data-feather="file-text"></span>
+            <span data-feather="list"></span>
             Daftar Wakaf  
           </a>
         </li>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-item-center px-3 mt-4 mb-1 text-muted">
+          <span>Pengaturan Website</span>
+        </h6>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/settings*') ? 'active' : '' }}" href="/dashboard/settings/static-pages">
+            <span data-feather="layout"></span>
+            Halaman Statis
+          </a>
+        </li>
+
+
+
       </ul>
+
+      
 
       {{-- @can('admin')
         <h6 class="sidebar-heading d-flex justify-content-between align-item-center px-3 mt-4 mb-1 text-muted">

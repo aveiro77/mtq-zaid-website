@@ -104,3 +104,9 @@ Route::get('/dashboard/donates/{id}/edit', [AdminDonateController::class, 'edit'
 Route::delete('/dashboard/donates/{id}', [AdminDonateController::class, 'destroy'])->middleware('auth');
 Route::put('/dashboard/donates/{id}', [AdminDonateController::class, 'update'])->middleware('admin');
 Route::resource('/dashboard/donates', AdminDonateController::class)->middleware('admin');
+
+Route::get('/dashboard/settings/static-pages', function () {
+    return view('dashboard.settings.index');
+})->middleware('admin');
+
+Route::get('/dashboard/settings/pembangunan-gedung-baru', [AdminSetDonateController::class, 'edit'])->middleware('auth');
