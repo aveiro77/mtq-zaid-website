@@ -12,6 +12,7 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminBudgetController;
 use App\Http\Controllers\AdminDonateController;
+use App\Http\Controllers\SetStaticPage02Controller;
 use App\Http\Controllers\SetStaticPage05Controller;
 use App\Http\Controllers\WakafPembangunanController;
 
@@ -113,3 +114,5 @@ Route::get('/dashboard/settings/static-pages', function () {
 Route::get('/dashboard/settings/static-page/pembangunan-gedung/edit', [SetStaticPage05Controller::class, 'edit'])->middleware('auth');
 Route::get('/dashboard/settings/static-page/pembangunan-gedung/show', [SetStaticPage05Controller::class, 'show'])->middleware('auth');
 Route::put('/dashboard/settings/static-page/pembangunan-gedung/update', [SetStaticPage05Controller::class, 'update'])->middleware('admin');
+
+Route::get('/dashboard/settings/static-page/galeri/show', [SetStaticPage02Controller::class, 'show'])->middleware('auth');

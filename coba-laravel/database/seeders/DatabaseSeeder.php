@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Budget;
 use App\Models\Donate;
+use App\Models\Set_static_page02;
 use App\Models\Set_static_page05;
 
 class DatabaseSeeder extends Seeder
@@ -205,8 +206,8 @@ class DatabaseSeeder extends Seeder
 
         Set_static_page05::create([
             'title' => 'Investasikan Segera Harta Anda Sebagai Bekal di Akhirat Kelak Dengan Program Wakaf Tunai Pembangunan',
-            'image' => '',
-            'caption' => '',
+            'image' => 'static-page-images/U46GvQpcaoyd1gCjXJ7QL5EGurMYzHrtLBlk2pSi.jpg',
+            'caption' => 'Progress Pembangunan',
             'navigate' => 'Wakaf -> Pembangunan Gedung Baru',
             'body' => '
             <blockquote class="blockquote my-4">“Perumpamaan (nafkah yang dikeluarkan oleh) orang-orang yang menafkahkan hartanya di jalan Allah adalah serupa dengan sebutir benih yang menumbuhkan tujuh bulir, pada tiap-tiap bulir: seratus biji. Allah melipat gandakan (ganjaran) bagi siapa yang Dia kehendaki. Dan Allah Maha Luas (kurnia-Nya) lagi Maha Mengetahui.”
@@ -235,6 +236,32 @@ class DatabaseSeeder extends Seeder
           </ul>
           <p class="mb-5">Tunggu apa lagi, mari wakafkan harta terbaik Anda sebagai wujud kepedulian terhadap masa depan bangsa dan masyarakat.</p>
             ',
+        ]);
+
+
+        Set_static_page02::create([
+            'image' => '',
+            'description' => 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+        ]);
+        Set_static_page02::create([
+            'image' => '',
+            'description' => 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. x'
+        ]);
+        Set_static_page02::create([
+            'image' => '',
+            'description' => 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. xx'
+        ]);
+        Set_static_page02::create([
+            'image' => '',
+            'description' => 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. xxx'
+        ]);
+        Set_static_page02::create([
+            'image' => '',
+            'description' => 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. xxxx'
+        ]);
+        Set_static_page02::create([
+            'image' => '',
+            'description' => 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. xxxxx'
         ]);
     }
 }

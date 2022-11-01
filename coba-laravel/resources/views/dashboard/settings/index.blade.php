@@ -46,8 +46,8 @@
             <td>Galeri</td>
             <td>Beranda</td>
             <td align="center">
-              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="/dashboard/settings/static-page/galeri/show" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/settings/static-page/galeri/show" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
