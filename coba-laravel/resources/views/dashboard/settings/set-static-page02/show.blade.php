@@ -1,8 +1,21 @@
 @extends('dashboard.layouts.main')
 
 @section('container')  
+
+
     <div class="album py-5 bg-white">
+
+        @if(session()->has('success')) 
+
+            <div class="alert alert-success alert-dismissible fade show col-lg" role="alert">
+              {{ session('success') }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        
+        @endif
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
             @foreach ($staticpage as $item)
                 
                 <div class="col">
@@ -24,7 +37,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary disabled">Delete</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <a href="/dashboard/settings/static-page/galeri/{{$item->id}}/edit" type="button" class="btn btn-sm btn-outline-secondary">Edit</a>
                                 </div>
                                 <small class="text-muted">9 mins</small>
                             </div>

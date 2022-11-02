@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Set_static_page02;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SetStaticPage02Controller extends Controller
 {
@@ -57,9 +58,11 @@ class SetStaticPage02Controller extends Controller
      * @param  \App\Models\Set_static_page02  $Set_static_page02
      * @return \Illuminate\Http\Response
      */
-    public function edit(Set_static_page02 $Set_static_page02)
+    public function edit($id, Set_static_page02 $Set_static_page02)
     {
-        //
+        return view('dashboard.settings.set-static-page02.edit', [
+            'gallery' => $Set_static_page02::find($id)
+        ]);
     }
 
     /**
@@ -69,9 +72,27 @@ class SetStaticPage02Controller extends Controller
      * @param  \App\Models\Set_static_page02  $Set_static_page02
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Set_static_page02 $Set_static_page02)
+    public function update($id, Request $request)
     {
-        //
+        $gallery = Set_static_page02::find($id);
+
+        $rules = [
+            'image' => 'image|file|max:1024',
+            'description' => 'required|max:128'
+        ];
+
+        $validatedData =  $request->validate($rules);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('rab-images');
+        }
+
+        Set_static_page02::where('id', $gallery->id)->update($validatedData);
+
+        return redirect('/dashboard/settings/static-page/galeri/show')->with('success', 'A image has been updated!');
     }
 
     /**

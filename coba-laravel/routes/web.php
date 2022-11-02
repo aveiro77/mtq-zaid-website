@@ -116,3 +116,5 @@ Route::get('/dashboard/settings/static-page/pembangunan-gedung/show', [SetStatic
 Route::put('/dashboard/settings/static-page/pembangunan-gedung/update', [SetStaticPage05Controller::class, 'update'])->middleware('admin');
 
 Route::get('/dashboard/settings/static-page/galeri/show', [SetStaticPage02Controller::class, 'show'])->middleware('auth');
+Route::get('/dashboard/settings/static-page/galeri/{id}/edit', [SetStaticPage02Controller::class, 'edit'])->middleware('auth');
+Route::put('/dashboard/settings/static-page/galeri/{id}/update', [SetStaticPage02Controller::class, 'update'])->middleware('auth');
