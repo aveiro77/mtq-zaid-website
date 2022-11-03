@@ -3,6 +3,7 @@
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Budget;
+use App\Models\Set_static_page02;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
@@ -31,7 +32,8 @@ Route::get('/ ', function () {
     return view('home', [
         'title' => 'Home',
         'active' => 'Home',
-        'posts' => Post::all()
+        'posts' => Post::all(),
+        'gallery' => Set_static_page02::all()
     ]);
 });
 

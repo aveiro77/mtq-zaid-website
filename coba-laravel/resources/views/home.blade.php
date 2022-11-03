@@ -98,7 +98,7 @@
       <div class="container py-5">
         <h2 class="lined mb-4">Galeri Foto</h2>
         <!-- <p class="lead">You can make also a portfolio or image gallery.</p> -->
-        <div class="row">
+        {{-- <div class="row">
           <a href="img/home/portfolio-1.jpg" data-lightbox="gallery" data-title="Description of Project No.1" class="col-lg-4 col-sm-6 p-0">
             <img src="img/home/portfolio-1.jpg" alt="" class="img-fluid">
           </a>
@@ -126,6 +126,15 @@
           <a href="img/home/portfolio-9.jpg" data-lightbox="gallery" data-title="Description of Project No.9" class="col-lg-4 col-sm-6 p-0">
             <img src="img/home/portfolio-9.jpg" alt="" class="img-fluid">
           </a>
+        </div> --}}
+
+        <div class="row">
+          
+          @foreach ($gallery as $item)
+            <a href="{{ asset('storage/'.$item->image) }}" data-lightbox="gallery" data-title="{{ $item->description }}" class="col-lg-4 col-sm-6 p-0">
+              <img src="{{ asset('storage/'.$item->image) }}" alt="gallery-photos" class="img-fluid">
+            </a>
+          @endforeach
         </div>
       </div>
     </section>

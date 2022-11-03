@@ -87,7 +87,7 @@ class SetStaticPage02Controller extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('rab-images');
+            $validatedData['image'] = $request->file('image')->store('static-page-images');
         }
 
         Set_static_page02::where('id', $gallery->id)->update($validatedData);

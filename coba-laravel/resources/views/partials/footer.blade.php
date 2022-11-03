@@ -48,7 +48,7 @@
             <p class="small text-gray mb-0">©2022 Markaz Zaid bin Tsabit Radhiallahu’anhu</p>
           </div>
           <div class="col-lg-6 text-center text-lg-right">
-            <p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
+            <p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" target="_blank" class="text-gray">Bootstrapious.com</a></p>
           </div>
         </div>
       </div>
