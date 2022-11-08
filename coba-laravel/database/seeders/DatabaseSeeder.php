@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Budget;
 use App\Models\Donate;
+use App\Models\Set_static_page01;
 use App\Models\Set_static_page02;
 use App\Models\Set_static_page05;
 
@@ -262,6 +263,18 @@ class DatabaseSeeder extends Seeder
         Set_static_page02::create([
             'image' => '',
             'description' => 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. xxxxx'
+        ]);
+
+        Set_static_page01::create([
+            'title' => 'PROFIL',
+            'subtitle' => 'Pondok Pesantren Markaz Zaid bin Tsabit Radhiallahu’anhu',
+            'image' => '/img/laman/jumbotron1.jpg',
+            'caption' => 'Image captions',
+            'navigate' => 'Beranda -> Profil',
+            'body' => '<p>Pondok Pesantren Markaz Zaid bin Tsabit berdiri sejak bulan Dzulqo’dah 1436 H, bertepatan dengan bulan September 2015 M. Pondok Pesantren ini Adalah lembaga pendidikan islam yang memfokuskan kegiatannya pada pembinaan dan pengajaran dibidang Al Qur’an dan Bahasa Arab yang telah mendapat SK Kemenag Nomor : 3291/Kk.11.34/5/PP.00.7/09/2017 dan berada dibawah naungan Yayasan Zaid Bin Tsabit Radhiallahu’anhu dengan Akta Notaris Lies Andriani, SH. Nomor 14 Tanggal 20 Mei 2016 dan SK Kemenkumham RI Nomor AHU-0026.185.AH.01.04 Tahun 2016.</p>
+    
+            <p><strong>Visi : </strong> Sebagai lembaga pendidikan Islam yang memiliki keunggulan dalam program tahfidz Al Qur’an dan program Bahasa Arab.</p>
+            <p><strong>Misi : </strong> Menyelenggarakan pendidikan dibidang Al Qur’an dan mencetak guru-guru Al Qur’an serta mengembangkan proses pembelajaran dengan metode dan sarana modern.</p>'
         ]);
     }
 }

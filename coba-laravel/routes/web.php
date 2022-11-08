@@ -84,6 +84,13 @@ Route::get('/kontak', function () {
     ]);
 });
 
+Route::get('/profil', function () {
+    return view('profil', [
+        'title' => 'Profil',
+        'active' => 'profil'
+    ]);
+});
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);

@@ -12,10 +12,10 @@
     
     <section class="py-5">
       <div class="container py-5">
-        <h2 class="mb-4">PROFIL YAYASAN</h2>
+        <h2 class="mb-4">PROFIL PONPES</h2>
         <p class="lead">Pondok Pesantren Markaz Tahfidz Qur’an Bersanad dan Bahasa Arab Zaid Bin Tsabit Pekalongan adalah lembaga pendidikan islam yang memfokuskan kegiatannya pada pembinaan dan pengajaran dibidang Al Qur’an dan Bahasa Arab.</p>
         <p class="text-small">yang telah mendapat SK Kemenag Nomor : 3291/Kk.11.34/5/PP.00.7/09/2017 dan berada dibawah naungan Yayasan Zaid Bin Tsabit Radhiallahu’anhu dengan Akta Notaris Lies Andriani, SH. Nomor 14 Tanggal 20 Mei 2016 dan SK Kemenkumham RI Nomor AHU-0026.185.AH.01.04 Tahun 2016.</p>
-        <a href="laman.html" class="btn btn-outline-primary btn-sm">Baca selengkapnya</a>
+        <a href="/profil" class="btn btn-outline-primary btn-sm">Baca selengkapnya</a>
       </div>
     </section>
     
