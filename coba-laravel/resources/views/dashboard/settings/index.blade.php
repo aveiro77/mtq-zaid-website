@@ -32,8 +32,8 @@
             <td>Profil</td>
             <td>Beranda</td>
             <td align="center">
-              <a href="/dashboard/budgets/" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/budgets/" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="/dashboard/settings/static-page/profile/show" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/settings/static-page/profile/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
               {{-- <form action="/dashboard/budgets/" method="post" class="d-inline">
                 @method('delete')
                 @csrf

@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Budget;
 use App\Models\Donate;
+use App\Models\Set_static_page01;
 use App\Models\Set_static_page05;
 use Illuminate\Support\Facades\DB;
 
-class WakafPembangunanController extends Controller
+class StaticPagesController extends Controller
 {
-    public function index()
+    public function wakaf()
     {
 
         return view('wakaf-pembangunan', [
@@ -88,6 +89,23 @@ class WakafPembangunanController extends Controller
             'active' => 'wakaf',
             // 'budgets' => DB::table('vdonations')->get(),
             'budgets' => $vdonations,
+        ]);
+    }
+
+    public function profile()
+    {
+        return view('profil', [
+            'title' => 'Profil',
+            'active' => 'profil',
+            'static_page' => Set_static_page01::all(),
+        ]);
+    }
+
+    public function contact()
+    {
+        return view('contact', [
+            'title' => 'Kontak',
+            'active' => 'kontak'
         ]);
     }
 }

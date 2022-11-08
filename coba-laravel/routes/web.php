@@ -13,9 +13,10 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminBudgetController;
 use App\Http\Controllers\AdminDonateController;
+use App\Http\Controllers\SetStaticPage01Controller;
 use App\Http\Controllers\SetStaticPage02Controller;
 use App\Http\Controllers\SetStaticPage05Controller;
-use App\Http\Controllers\WakafPembangunanController;
+use App\Http\Controllers\StaticPagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,10 +64,12 @@ Route::get('/categories', function () {
 });
 
 
-Route::get('/wakaf-pembangunan', [WakafPembangunanController::class, 'index']);
-Route::get('/panduan-wakaf-pembangunan', [WakafPembangunanController::class, 'wakafGuide']);
-Route::get('/status-rab', [WakafPembangunanController::class, 'budgetStatus']);
-Route::get('/daftar-wakaf', [WakafPembangunanController::class, 'wakafList']);
+Route::get('/wakaf-pembangunan', [StaticPagesController::class, 'wakaf']);
+Route::get('/panduan-wakaf-pembangunan', [StaticPagesController::class, 'wakafGuide']);
+Route::get('/status-rab', [StaticPagesController::class, 'budgetStatus']);
+Route::get('/daftar-wakaf', [StaticPagesController::class, 'wakafList']);
+Route::get('/profil', [StaticPagesController::class, 'profile']);
+Route::get('/kontak', [StaticPagesController::class, 'contact']);
 Route::get('/daftar-wakaf/{budget:slug}', function (Budget $budget) {
     return view('wakaf-list', [
         'title' => 'Daftar Wakaf',
@@ -74,20 +77,6 @@ Route::get('/daftar-wakaf/{budget:slug}', function (Budget $budget) {
         // 'wakaf' => $budgeting->donates //harus sesuai dengan relasi pada model budgeting function donates
         'wakaf' => $budget->donates->load('budget'),
         'paginate' => 0
-    ]);
-});
-
-Route::get('/kontak', function () {
-    return view('contact', [
-        'title' => 'Kontak',
-        'active' => 'kontak'
-    ]);
-});
-
-Route::get('/profil', function () {
-    return view('profil', [
-        'title' => 'Profil',
-        'active' => 'profil'
     ]);
 });
 
@@ -123,6 +112,10 @@ Route::get('/dashboard/settings/static-pages', function () {
 Route::get('/dashboard/settings/static-page/pembangunan-gedung/edit', [SetStaticPage05Controller::class, 'edit'])->middleware('auth');
 Route::get('/dashboard/settings/static-page/pembangunan-gedung/show', [SetStaticPage05Controller::class, 'show'])->middleware('auth');
 Route::put('/dashboard/settings/static-page/pembangunan-gedung/update', [SetStaticPage05Controller::class, 'update'])->middleware('admin');
+
+Route::get('/dashboard/settings/static-page/profile/edit', [SetStaticPage01Controller::class, 'edit'])->middleware('auth');
+Route::get('/dashboard/settings/static-page/profile/show', [SetStaticPage01Controller::class, 'show'])->middleware('auth');
+Route::put('/dashboard/settings/static-page/profile/update', [SetStaticPage01Controller::class, 'update'])->middleware('admin');
 
 Route::get('/dashboard/settings/static-page/galeri/show', [SetStaticPage02Controller::class, 'show'])->middleware('auth');
 Route::get('/dashboard/settings/static-page/galeri/{id}/edit', [SetStaticPage02Controller::class, 'edit'])->middleware('auth');

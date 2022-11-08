@@ -26,13 +26,13 @@
     </div>      
       <div class="row">
         <div class="col-lg">
-          <table class="table table-hover table-sm">
+          <table class="table table-hover table-sm table-bordered">
             <thead class="bg-dark text-white">
               <tr>
-                <th>Tanggal Wakaf</th>
+                <th>Tanggal</th>
                 <th>Nama</th>
                 <th>Alamat</th>
-                <th>Telepon</th>
+                {{-- <th>Telepon</th> --}}
                 <th>Peruntukan</th>
                 <th class="text-right">Jumlah (Rp)</th>
               </tr>
@@ -42,27 +42,26 @@
                 <?php $tsummary=0 ?>
 
                 @if($wakaf->count())
-
                   @foreach($wakaf as $w)
                       <tr>
-                          <td>{{ date_format(date_create($w->donate_date),"d M y") }}</td>
-                          <td>{{ $w->name }}</td>
-                          <td>{{ $w->address }}</td>
-                          <td>{{ $w->phone }}</td>
-                          {{-- <td>{{ sprintf("%03d", $w->budgeting_id) }}</td> --}}
-                          <td>{{ $w->budget->description }}</td>
-                          <td class="text-right">{{ number_format($w->nominal,2,",",".") }}</td>
+                          <td class="text-small">{{ date_format(date_create($w->donate_date),"d M y") }}</td>
+                          <td class="text-small">{{ $w->name }}</td>
+                          <td class="text-small">{{ $w->address }}</td>
+                          {{-- <td class="text-small">{{ $w->phone }}</td> --}}
+                          {{-- <td class="text-small">{{ sprintf("%03d", $w->budgeting_id) }}</td> --}}
+                          <td class="text-small">{{ $w->budget->description }}</td>
+                          <td class="text-small text-right">{{ number_format($w->nominal,2,",",".") }}</td>
                       </tr>
                       <?php $i++ ?>
                       <?php $tsummary=$tsummary+$w->nominal ?>
                   @endforeach
                   <tr class="bg-dark text-white">
-                    <td class="text-center" colspan="5">TOTAL</td>
+                    <td class="text-center" colspan="4">TOTAL</td>
                     <td class="text-right">{{ number_format($tsummary,2,",",".") }}</td>
-                  </tr>                   
+                  </tr> 
                 @else
                   <tr>
-                    <td colspan="6" class="text-center">No data found</td>
+                    <td colspan="5" class="text-center">No data found</td>
                   </tr>
                 @endif   
                 

@@ -6,9 +6,10 @@
     <div class="row my-3">
         <div class="col-lg-8">
             <h2>{{ $staticpage->title }}</h2>
+            <p class="lead">{{ $staticpage->subtitle }}</p>
 
             <a href="/dashboard/settings/static-pages" class="btn btn-sm btn-primary"><span data-feather="arrow-left"></span> Kembali</a>
-            <a href="/dashboard/settings/static-page/pembangunan-gedung/edit" class="btn btn-sm btn-warning"><span data-feather="edit"></span> Edit</a>
+            <a href="/dashboard/settings/static-page/profile/edit" class="btn btn-sm btn-warning"><span data-feather="edit"></span> Edit</a>
             
             @if($staticpage->image)
                 <div style="overflow:hidden;">
