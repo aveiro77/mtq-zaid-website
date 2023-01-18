@@ -1,0 +1,8 @@
+nama website : blogguelaravel
+password : z467sGf&HYOAaBb3Plml
+
+== database ==
+db name : id19597315_wpu_blog
+user : id19597315_wpu
+pass : Pekalongan123*
+host : localhost
