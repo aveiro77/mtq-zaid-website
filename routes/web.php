@@ -70,6 +70,15 @@ Route::get('/status-rab', [StaticPagesController::class, 'budgetStatus']);
 Route::get('/daftar-wakaf', [StaticPagesController::class, 'wakafList']);
 Route::get('/profil', [StaticPagesController::class, 'profile']);
 Route::get('/kontak', [StaticPagesController::class, 'contact']);
+
+Route::get('/program-pendidikan', function () {
+    return view('program-pendidikan', [
+        'title' => ' - Program pendidikan',
+        'active' => 'akademik'
+    ]);
+});
+
+
 Route::get('/daftar-wakaf/{budget:slug}', function (Budget $budget) {
     return view('wakaf-list', [
         'title' => 'Daftar Wakaf',

@@ -50,23 +50,23 @@
 
     <section class="py-5">
       <div class="container py-5">
-        <h2 class="mb-5">Program Pendidikan</h2>
+        <h2 class="mb-5">Metode Pembelajaran</h2>
         <div class="row mb-2">
           <div class="col-lg-4 col-md-6 mb-4">
             <!--<div class="icon mb-4"><i class="pe-7s-alarm"></i></div>-->
-            <div class="mb-4"><img src="img/home/105x105/p1-min-105x105.png" alt="" class="img-fluid"></div>
+            <div class="mb-4"><img src="img/home/105x105/p1-min-105x105.png" alt="icon tahfidz" class="img-fluid"></div>
             <h5 class="lined mb-4">Tahfidz</h5>
             <p class="text-muted text-small">Tahfidzul Qur’an 30 Juz dengan metode lauh (menulis di atas papan).</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <!--<div class="icon mb-4"><i class="pe-7s-cloud"></i></div>-->
-            <div class="mb-4"><img src="img/home/105x105/p2-min-105x105.png" alt="" class="img-fluid"></div>
+            <div class="mb-4"><img src="img/home/105x105/p2-min-105x105.png" alt="icon tilawah tahsin" class="img-fluid"></div>
             <h5 class="lined mb-4">Tahsin Tilawah</h5>
             <p class="text-muted text-small">Santri menyelesaikan setoran 30 Juz dan memiliki bacaan sesuai dengan standar tajwid.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <!--<div class="icon mb-4"><i class="pe-7s-coffee"></i></div>-->
-            <div class="mb-4"><img src="img/home/105x105/p3-min-105x105.png" alt="" class="img-fluid"></div>
+            <div class="mb-4"><img src="img/home/105x105/p3-min-105x105.png" alt="icon matan tajwid" class="img-fluid"></div>
             <h5 class="lined mb-4">Matan Tajwid</h5>
             <p class="text-muted text-small">Pembelajaran matan – matan tajwid dengan menggunakan metode dan sarana yang modern.</p>
           </div>
@@ -75,19 +75,19 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
             <!--<div class="icon mb-4"><i class="pe-7s-monitor"></i></div>-->
-            <div class="mb-4"><img src="img/home/105x105/p4-min-105x105.png" alt="" class="img-fluid"></div>
+            <div class="mb-4"><img src="img/home/105x105/p4-min-105x105.png" alt="icon pembelajaraan qira'at" class="img-fluid"></div>
             <h5 class="lined mb-4">Pembelajaran Qiraat</h5>
             <p class="text-muted text-small">Qiraat Asyrah (Hafs, Syu’bah, Warsy, Qalun, dsb).</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
             <!--<div class="icon mb-4"><i class="pe-7s-signal"></i></div>-->
-            <div class="mb-4"><img src="img/home/105x105/p5-min-105x105.png" alt="" class="img-fluid"></div>
+            <div class="mb-4"><img src="img/home/105x105/p5-min-105x105.png" alt="icon sanad qira'at" class="img-fluid"></div>
             <h5 class="lined mb-4">Sanad Qiraat Al Qur'an</h5>
             <p class="text-muted text-small">Pemberian sanad Qiraat Al Qur’an yang bersambung kepada Rasulullah Muhammad Shallahu’alaihi wa sallam.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
             <!--<div class="icon mb-4"><i class="pe-7s-id"></i></div>-->
-            <div class="mb-4"><img src="img/home/105x105/p5-min-105x105.png" alt="" class="img-fluid"></div>
+            <div class="mb-4"><img src="img/home/105x105/p5-min-105x105.png" alt="icon bahasa arab" class="img-fluid"></div>
             <h5 class="lined mb-4">Bahasa Arab</h5>
             <p class="text-muted text-small">-</p>
           </div>

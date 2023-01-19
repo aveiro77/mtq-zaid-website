@@ -9,11 +9,10 @@
             <li class="nav-item"><a href="/" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 {{ Request::is('/') ? 'active' : '' }}">Beranda </a>
             </li>
             <li class="nav-item dropdown">
-              <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle {{ Request::is('akademik') ? 'active' : '' }}">Akademik</a>
+              <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle @if(Request::is('akademik') or Request::is('program-pendidikan')) active @endif">Akademik</a>
               <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
-                <a href="/kurikulum" class="dropdown-item small text-uppercase">Kurikulum</a>
+                <a href="/program-pendidikan" class="dropdown-item small text-uppercase">Program Pendidikan</a>
                 <a href="/staf-pengajar" class="dropdown-item small text-uppercase">Pengajar & Staff</a>
-                {{-- <a href="/psb" class="dropdown-item small text-uppercase">Penerimaan Santri Baru</a> --}}
               </div>
             </li>
             <li class="nav-item"><a href="/posts" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 {{ Request::is('posts') ? 'active' : '' }}">Blog </a>
