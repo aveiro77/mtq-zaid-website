@@ -15,6 +15,7 @@ use App\Http\Controllers\AdminBudgetController;
 use App\Http\Controllers\AdminDonateController;
 use App\Http\Controllers\SetStaticPage01Controller;
 use App\Http\Controllers\SetStaticPage02Controller;
+use App\Http\Controllers\SetStaticPage03Controller;
 use App\Http\Controllers\SetStaticPage05Controller;
 use App\Http\Controllers\StaticPagesController;
 
@@ -71,12 +72,7 @@ Route::get('/daftar-wakaf', [StaticPagesController::class, 'wakafList']);
 Route::get('/profil', [StaticPagesController::class, 'profile']);
 Route::get('/kontak', [StaticPagesController::class, 'contact']);
 
-Route::get('/program-pendidikan', function () {
-    return view('program-pendidikan', [
-        'title' => ' - Program pendidikan',
-        'active' => 'akademik'
-    ]);
-});
+Route::get('/program-pendidikan', [StaticPagesController::class, 'educationPrograms']);
 
 
 Route::get('/daftar-wakaf/{budget:slug}', function (Budget $budget) {
@@ -129,3 +125,9 @@ Route::put('/dashboard/settings/static-page/profile/update', [SetStaticPage01Con
 Route::get('/dashboard/settings/static-page/galeri/show', [SetStaticPage02Controller::class, 'show'])->middleware('auth');
 Route::get('/dashboard/settings/static-page/galeri/{id}/edit', [SetStaticPage02Controller::class, 'edit'])->middleware('auth');
 Route::put('/dashboard/settings/static-page/galeri/{id}/update', [SetStaticPage02Controller::class, 'update'])->middleware('auth');
+
+Route::resource('/dashboard/settings/static-page/program-pendidikan', SetStaticPage03Controller::class)->middleware('admin');
+Route::get('/dashboard/settings/static-page/program-pendidikan/{id}/edit', [SetStaticPage03Controller::class, 'edit'])->middleware('admin');
+Route::delete('/dashboard/settings/static-page/program-pendidikan/{id}/delete', [SetStaticPage03Controller::class, 'destroy'])->middleware('auth');
+Route::put('/dashboard/settings/static-page/program-pendidikan/{id}/update', [SetStaticPage03Controller::class, 'update'])->middleware('auth');
+Route::get('/dashboard/settings/static-page/program-pendidikan/{id}/show', [SetStaticPage03Controller::class, 'show'])->middleware('auth');

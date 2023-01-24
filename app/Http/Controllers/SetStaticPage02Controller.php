@@ -45,10 +45,10 @@ class SetStaticPage02Controller extends Controller
      * @param  \App\Models\Set_static_page02  $Set_static_page02
      * @return \Illuminate\Http\Response
      */
-    public function show(Set_static_page02 $Set_static_page02)
+    public function show(Set_static_page02 $set_static_page02)
     {
         return view('dashboard.settings.set-static-page02.show', [
-            'staticpage' => $Set_static_page02::all()
+            'staticpage' => $set_static_page02::all()
         ]);
     }
 
@@ -58,10 +58,10 @@ class SetStaticPage02Controller extends Controller
      * @param  \App\Models\Set_static_page02  $Set_static_page02
      * @return \Illuminate\Http\Response
      */
-    public function edit($id, Set_static_page02 $Set_static_page02)
+    public function edit($id, Set_static_page02 $set_static_page02)
     {
         return view('dashboard.settings.set-static-page02.edit', [
-            'gallery' => $Set_static_page02::find($id)
+            'gallery' => $set_static_page02::find($id)
         ]);
     }
 

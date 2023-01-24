@@ -51,11 +51,11 @@
             </td>
           </tr>
           <tr>
-            <td>Kurikulum</td>
-            <td>Akademik <span data-feather="arrow-right"></span> Kurikulum</td>
+            <td>Program Pendidikan</td>
+            <td>Akademik <span data-feather="arrow-right"></span> Program Pendidikan</td>
             <td align="center">
-              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
+              <a href="/dashboard/settings/static-page/program-pendidikan" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="/dashboard/settings/static-page/program-pendidikan" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>

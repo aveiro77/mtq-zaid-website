@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Budget;
 use App\Models\Donate;
 use App\Models\Set_static_page01;
+use App\Models\Set_static_page03;
 use App\Models\Set_static_page05;
 use Illuminate\Support\Facades\DB;
 
@@ -106,6 +107,26 @@ class StaticPagesController extends Controller
         return view('contact', [
             'title' => 'Kontak',
             'active' => 'kontak'
+        ]);
+    }
+
+
+    public function educationPrograms()
+    {
+        return view('program-pendidikan', [
+            'title' => ' - Program pendidikan',
+            'active' => 'akademik',
+            'programs' => Set_static_page03::all(),
+            'categories' => [
+                [
+                    'id' => 1,
+                    'name' => 'Program Reguler'
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'Program Belajar Tahsin & Tahfidz Al Qur\'an'
+                ],
+            ]
         ]);
     }
 }
