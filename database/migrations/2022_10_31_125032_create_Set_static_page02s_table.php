@@ -15,6 +15,7 @@ class CreateSetStaticPage02sTable extends Migration
     {
         Schema::create('set_static_page02s', function (Blueprint $table) {
             $table->id();
+            $table->string('title')->nullable();
             $table->string('image');
             $table->text('description')->nullable();
             $table->timestamps();

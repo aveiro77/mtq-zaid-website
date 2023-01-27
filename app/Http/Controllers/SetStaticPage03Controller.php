@@ -16,6 +16,7 @@ class SetStaticPage03Controller extends Controller
     public function index(Set_static_page03 $set_static_page03)
     {
         return view('dashboard.settings.set-static-page03.index', [
+            'title' => 'Program Pendidikan',
             'staticpage' => $set_static_page03::all()
         ]);
     }
@@ -28,6 +29,7 @@ class SetStaticPage03Controller extends Controller
     public function create()
     {
         return view('dashboard.settings.set-static-page03.create', [
+            'title' => 'Input Program Pendidikan',
             'categories' => [
                 [
                     'id' => 1,
@@ -88,6 +90,7 @@ class SetStaticPage03Controller extends Controller
     public function edit($id, Set_static_page03 $set_static_page03)
     {
         return view('dashboard.settings.set-static-page03.edit', [
+            'title' => 'Edit Program',
             'set_static_page03' => $set_static_page03::find($id),
             'categories' => [
                 [

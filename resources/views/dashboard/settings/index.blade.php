@@ -31,7 +31,7 @@
           <tr>
             <td>Profil</td>
             <td>Beranda</td>
-            <td align="center">
+            <td>
               <a href="/dashboard/settings/static-page/profile/show" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/settings/static-page/profile/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
               {{-- <form action="/dashboard/budgets/" method="post" class="d-inline">
@@ -45,31 +45,37 @@
           <tr>
             <td>Galeri</td>
             <td>Beranda</td>
-            <td align="center">
+            <td>
               <a href="/dashboard/settings/static-page/galeri/show" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/settings/static-page/galeri/show" class="badge bg-warning"><span data-feather="edit"></span></a>
+            
+            </td>
+          </tr>
+          <tr>
+            <td>Metode Pembelajaran</td>
+            <td>Beranda</td>
+            <td>
+              <a href="/dashboard/settings/static-page/metode/show" class="badge bg-info"><span data-feather="eye"></span></a>
             </td>
           </tr>
           <tr>
             <td>Program Pendidikan</td>
             <td>Akademik <span data-feather="arrow-right"></span> Program Pendidikan</td>
-            <td align="center">
+            <td>
               <a href="/dashboard/settings/static-page/program-pendidikan" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="/dashboard/settings/static-page/program-pendidikan" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
           </tr>
           <tr>
             <td>Pengajar & Staff</td>
             <td>Akademik <span data-feather="arrow-right"></span> Pengajar & Staff</td>
-            <td align="center">
-              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
+            <td>
+              <!--<a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>-->
             </td>
           </tr>
           <tr>
             <td>Pembangunan Gedung Baru</td>
             <td>Wakaf <span data-feather="arrow-right"></span> Pembangunan Gedung Baru</td>
-            <td align="center">
+            <td>
               <a href="/dashboard/settings/static-page/pembangunan-gedung/show" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="/dashboard/settings/static-page/pembangunan-gedung/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
             </td>
@@ -77,17 +83,17 @@
           <tr>
             <td>Operasional Pondok</td>
             <td>Wakaf <span data-feather="arrow-right"></span> Operasional Pondok</td>
-            <td align="center">
-              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
+            <td>
+              <!--<a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>-->
             </td>
           </tr>
           <tr>
             <td>Kontak</td>
             <td>Kontak</td>
-            <td align="center">
-              <a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
-              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
+            <td>
+              <!--<a href="#" class="badge bg-info"><span data-feather="eye"></span></a>
+              <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>-->
             </td>
           </tr>
           

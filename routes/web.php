@@ -126,6 +126,13 @@ Route::get('/dashboard/settings/static-page/galeri/show', [SetStaticPage02Contro
 Route::get('/dashboard/settings/static-page/galeri/{id}/edit', [SetStaticPage02Controller::class, 'edit'])->middleware('auth');
 Route::put('/dashboard/settings/static-page/galeri/{id}/update', [SetStaticPage02Controller::class, 'update'])->middleware('auth');
 
+Route::get('/dashboard/settings/static-page/metode/show', [SetStaticPage02Controller::class, 'show2'])->middleware('auth');
+Route::get('/dashboard/settings/static-page/metode/create', [SetStaticPage02Controller::class, 'create2'])->middleware('auth');
+Route::post('/dashboard/settings/static-page/metode/store', [SetStaticPage02Controller::class, 'store2'])->middleware('auth');
+Route::get('/dashboard/settings/static-page/metode/{id}/edit', [SetStaticPage02Controller::class, 'edit2'])->middleware('admin');
+Route::put('/dashboard/settings/static-page/metode/{id}/update', [SetStaticPage02Controller::class, 'update2'])->middleware('auth');
+Route::delete('/dashboard/settings/static-page/metode/{id}/delete', [SetStaticPage02Controller::class, 'destroy'])->middleware('auth');
+
 Route::resource('/dashboard/settings/static-page/program-pendidikan', SetStaticPage03Controller::class)->middleware('admin');
 Route::get('/dashboard/settings/static-page/program-pendidikan/{id}/edit', [SetStaticPage03Controller::class, 'edit'])->middleware('admin');
 Route::delete('/dashboard/settings/static-page/program-pendidikan/{id}/delete', [SetStaticPage03Controller::class, 'destroy'])->middleware('auth');
