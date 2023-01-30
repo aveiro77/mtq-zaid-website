@@ -11,6 +11,7 @@ use App\Models\Donate;
 use App\Models\Set_static_page01;
 use App\Models\Set_static_page02;
 use App\Models\Set_static_page05;
+use App\Models\Sosmed;
 
 class DatabaseSeeder extends Seeder
 {
@@ -29,6 +30,30 @@ class DatabaseSeeder extends Seeder
             'email' => 'jumhan@gmail.com',
             'password' => bcrypt('jumhan'),
             'is_admin' => '1'
+        ]);
+
+        Sosmed::create([
+            'name' => 'Facebook',
+            'link' => '#',
+            'icon' => 'fab fa-facebook-f',
+        ]);
+
+        Sosmed::create([
+            'name' => 'Instagram',
+            'link' => '#',
+            'icon' => 'fab fa-instagram',
+        ]);
+
+        Sosmed::create([
+            'name' => 'Twitter',
+            'link' => '#',
+            'icon' => 'fab fa-twitter',
+        ]);
+
+        Sosmed::create([
+            'name' => 'Email',
+            'link' => '#',
+            'icon' => 'fas fa-envelope',
         ]);
 
         // this one put from the factory

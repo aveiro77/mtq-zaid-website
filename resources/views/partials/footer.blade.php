@@ -26,10 +26,14 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <h5 class="lined lined-dark mb-3">Media Sosial</h5>
           <ul class="list-inline">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/mtq.zaid/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a></li>
+            @foreach($contacts as $sosmed)
+              <li class="list-inline-item"><a href="{{ $sosmed->link }}" class="social-link"><i class="{{ $sosmed->icon }}" target="_blank"></i></a></li>
+            @endforeach
+            
+            <!--<li class="list-inline-item"><a href="#" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a></li>
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fas fa-envelope"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i class="fas fa-envelope"></i></a></li>-->
+
           </ul>
         </div>
         <div class="col-lg-4 col-md-6">

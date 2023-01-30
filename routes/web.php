@@ -4,6 +4,7 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Models\Budget;
 use App\Models\Set_static_page02;
+use App\Models\Sosmed;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminBudgetController;
 use App\Http\Controllers\AdminDonateController;
+use App\Http\Controllers\AdminSosmedController;
 use App\Http\Controllers\SetStaticPage01Controller;
 use App\Http\Controllers\SetStaticPage02Controller;
 use App\Http\Controllers\SetStaticPage03Controller;
@@ -35,7 +37,8 @@ Route::get('/ ', function () {
         'title' => 'Home',
         'active' => 'Home',
         'posts' => Post::all(),
-        'gallery' => Set_static_page02::all()
+        'gallery' => Set_static_page02::all(),
+        'contacts' => Sosmed::all()
     ]);
 });
 
@@ -138,3 +141,6 @@ Route::get('/dashboard/settings/static-page/program-pendidikan/{id}/edit', [SetS
 Route::delete('/dashboard/settings/static-page/program-pendidikan/{id}/delete', [SetStaticPage03Controller::class, 'destroy'])->middleware('auth');
 Route::put('/dashboard/settings/static-page/program-pendidikan/{id}/update', [SetStaticPage03Controller::class, 'update'])->middleware('auth');
 Route::get('/dashboard/settings/static-page/program-pendidikan/{id}/show', [SetStaticPage03Controller::class, 'show'])->middleware('auth');
+
+Route::get('/dashboard/settings/sosmed', [AdminSosmedController::class, 'index'])->middleware('auth');
+Route::put('/dashboard/settings/sosmed/{id}/update', [AdminSosmedController::class, 'update'])->middleware('auth');
